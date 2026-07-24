@@ -102,7 +102,9 @@
 /* SHOPPING VARIABLES */
     const item_list = document.getElementById("item");
     const prAllItem = document.getElementById("allBoughtItems");
+
     let bought_logging_list = JSON.parse(localStorage.getItem("bought") || "[]");
+    let bought_item;
 
     let job_price = Number(localStorage.getItem("jobPrice") || 1000);
     let change_active;
@@ -132,6 +134,7 @@
         }
 
         money -= 10000;
+        bought_item = "Ghost Burger";
 
       } else if (item === "mc") {
 
@@ -146,7 +149,8 @@
         if (selected_item === "hunger") hunger -= 25;
         if (selected_item === "happiness") happiness += 25;
 
-        money -= 6900
+        money -= 6900;
+        bought_item = "Mysterious Cola";
 
       } else if (item === "gl") {
 
@@ -157,6 +161,7 @@
 
         money -= 15000;
         happiness += 50;
+        bought_item = "Gaming Laptop";
 
       } else if (item === "cj") {
 
@@ -179,6 +184,8 @@
           change_active = false;
         }, 32);
 
+        bought_item = "Change Job";
+
       } else if (item === "c") {
 
         age_price = ((2500 * (age * 75)) / 100);
@@ -190,9 +197,10 @@
 
         age += 1;
         money -= age_price;
+        bought_item = "Clock";
       };
 
-      bought_logging_list.push(item);
+      bought_logging_list.push(bought_item);
 
       save();
       printInfos();
