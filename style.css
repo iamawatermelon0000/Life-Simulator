@@ -1,0 +1,88 @@
+    body,
+    #container1,
+    #actions,
+    #upgrade,
+    #status,
+    #startingScreen,
+    #statistic,
+    #career,
+    #shop,
+    #rent,
+    #lottery {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 75px;
+
+      font-size: 20px;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      font-weight: bold;
+      font-style: italic;
+      text-align: center;
+
+      transition: 0.5s ease;
+    }
+
+    body,
+    #container1,
+    #startingScreen {
+      flex-direction: column;
+      gap: 50px;
+    }
+
+    body {
+      background: #3b3b3b;
+      border: 1px solid black;
+    }
+
+    #startingScreen {
+      z-index: 1;
+    }
+
+    #container1 {
+      z-index: 0;
+
+      font-family: 'Courier New', Courier, monospace;
+      font-weight: bolder;
+      font-size: 19px;
+    }
+
+    button,
+    select {
+      width: 175px;
+      height: 75px;
+
+      font-size: 15px;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      font-weight: bolder;
+      font-style: italic;
+      text-align: center;
+
+      transition: 0.5s ease;
+    }
+
+    progress {
+      border-radius: 100%;
+    }
+
+    button:hover, select:hover {
+      background: #FFFFFF;
+      box-shadow: 0 0 40px 20px #FFFFFF;
+    }
+
+    button:hover {
+      transform: translateY(5px);
+      border-radius: 50%;
+    }
+
+    button:active {
+      transform: translateY(-5px);
+    }
+
+    p:hover {
+      box-shadow: 0 0 50px 15px yellow;
+      transform: translateY(-5px);
+      transition: 0.5s ease;
+
+      background: #FFEB00;
+    }

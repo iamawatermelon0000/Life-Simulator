@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title msg="this project is long as heck">life. (an idle game ig)</title>
+
+  <script src="begin.js" defer></script>
+  <script src="main.js" defer></script>
+  <script src="actions.js" defer></script>
+  <script src="events.js" defer></script>
+  <script src="job.js" defer></script>
+  <script src="shop_and_upgrades.js" defer></script>
+  <script src="rent.js" defer></script>
+  <script src="save_and_render.js" defer></script>
+  <script src="anti_cheat.js" defer></script>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div id="container1">
+
+    <div id="actions">Actions:
+      <select id="chooseAction">
+        <option>(None)</option>
+        <option>Cry</option>
+        <option>Sleep</option>
+        <option>Eat</option>
+        <option>Play</option>
+        <option>Spend time</option>
+        <option>Beg for money</option>
+        <option>Iron your clothes</option>
+      </select>
+      <button type="button" onclick="doActions()">Do action</button>
+    </div>
+
+    <div id="statistic">Stats:
+      <p id="age">Age:</p>
+      <p id="name">Name:</p>
+      <p id="money">Money:</p>
+    </div>
+
+    <div id="rent">Rent:
+      <p id="currentRent">Current Rent:</p>
+      <p id="unpaidRent">Total Unpaid Rent:</p>
+      <button type="button" onclick="payRent()">Pay Rent</button>
+    </div>
+
+    <div id="career">Career:
+      <button type="button" onclick="job()">Work/ Get a j*b</button>
+      <p id="job">Job:</p>
+      <p id="jobStatus">[Statues will be printed here]</p>
+      <p id="income">Income: $-9999/ -9s</p>
+    </div>
+
+    <div id="status">Status:
+      <p id="energy">Energy:</p>
+      <progress id="enProg" value="0" max="100"></progress>
+
+      <p id="hunger">Hunger:</p>
+      <progress id="hgProg" max="100"></progress>
+
+      <p id="happy">Happiness:</p>
+      <progress id="hpProg" max="100"></progress>
+    </div>
+
+    <div id="lottery">
+      <p id="numOfTickets">Your number of tickets:</p>
+      <p id="ticketNumber">Your ticket number: PLACEHOLDER</p>
+      <p id="winningNumber">Winning ticket number: PLACEHOLDER</p>
+
+      <button type="button" onclick="buyLottery()">Buy a lottery ticket</button>
+      <button type="button" onclick="playLottery()">Play the lottery</button>
+    </div>
+
+    <div id="upgrade">Upgrades:
+
+      <select id="upgrades">
+        <option value="none">None</option>
+        <option value="en">Energy (Reduces Energy lost, 75k each)</option>
+        <option value="hp">Happiness (Reduces Happiness lost, 50k each)</option>
+        <option value="age">Age (Reduces aging time, 100k each)</option>
+        <option value="hg">Hunger (Reduces hunger gain, 40k each)</option>
+        <option>---</option>
+        <option value="me">Max Energy (increases max energy by 10, max 5; 150k each)</option>
+        <option value="mh">Max Happiness (increases max happiness by 10, max 5; 145k each)</option>
+        <option value="mhun" title="Instead of hunger being capped at 0, you can now get like -50 min hunger">Min Hunger (decreases minimum hunger by 10, max 5; 165k each)</option>
+      </select>
+
+      <button type="button" onclick="buyUpgrades()">Buy</button>
+      <p id="totalUpgrades">note: in [...: n], n is the time (s)</p>
+    </div>
+
+    <div id="shop">Shop:
+
+      <select id="item" title="!!! Items will be used as soon as they are bought !!!">
+        <option>None</option>
+        <option value="gb">Ghost Burbur (Gain or Lose hunger by 100, 10k each)</option>
+        <!--10k-->
+
+        <option value="mc">Mysterious Cola (Gains 25 of a random stats)</option>
+        <!--6.9k-->
+
+        <option value="gl">Gaming laptop (Gains 50 happiness)</option>
+        <!--15k-->
+
+        <option value="cj">Change Job (Price Gradually Increases)</option>
+        <!--starts at 1k, increases by 1k each time-->
+
+        <option value="c">Clock [(Increases age by 1), (Price Increases by 75% of your age)]</option>
+        <!--base: 2.5k-->
+      </select>
+      <p id="boughtItem">You didn't buy anything!</p>
+      <p id="allBoughtItems">Every items that you've bought:</p>
+      <button type="button" onclick="buyItem()">Confirm purchase</button>
+    </div>
+
+  </div>
+
+  <div id="startingScreen">
+    <button id="startGame" type="button" onclick="begin()">Start</button>
+  </div>
+
+</body>
+</html>
