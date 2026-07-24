@@ -182,6 +182,10 @@
         /// const conf_rebirth = confirm("You've reached age 100, rebirth?")
         // if (conf_rebirth) {wipeData(); localStorage.clear(); localtion.reload();} else return;
 
+        energy = Number(energy.toFixed(0));
+        hunger = Number(hunger.toFixed(0));
+        happiness = Number(happiness.toFixed(0));
+
         if (energy <= 0) energy = 0;
         if (happiness <= 0) happiness = 0;
         if (hunger < -min_hunger) hunger = 0;
