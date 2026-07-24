@@ -6,6 +6,7 @@
 - dont try to cheat...<br>
 
 ## Main
+-------
 ### About
 - Made by: @iamawatermelon0000<br>
 - Project Name: Life Simulator<br>
