@@ -20,6 +20,7 @@
 **1.0.2 to 1.1.0 - Bug fixes, optimization, updated files**<br>
 **1.1.2 - Multiplier, Rebirth incoming!**<br>
 **1.1.3 - Playing the lottery now actually decreases your number of tickets**<br>
+**1.1.5 - Bought items now shows the item name properly, now makes sure that you need to have a JOB and older than 16 to pay rent**<br>
 
 ### Notes
 - If you got banned by the anticheat, contact @iamawatermelon0000 on Discord<br>
