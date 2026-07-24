@@ -19,6 +19,7 @@
 **1.0.0 - Release**<br>
 **1.0.2 to 1.1.0 - Bug fixes, optimization, updated files**<br>
 **1.1.2 - Multiplier, Rebirth incoming!**<br>
+**1.1.3 - Playing the lottery now actually decreases your number of tickets**<br>
 
 ### Notes
 - If you got banned by the anticheat, contact @iamawatermelon0000 on Discord<br>
