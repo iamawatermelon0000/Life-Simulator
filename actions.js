@@ -198,7 +198,7 @@
       } else if (Math.random() < 0.05) {
         alert("You found some... collectables in your clothes while ironing it??? finders keerps right");
         money += Math.floor(Math.random() * (9999 - 100 + 1) + 100);
-        
+
       } else {
         alert("You ironed your clothes!");
         energy -= 10;
@@ -219,13 +219,12 @@
     function buyLottery() {
 
       const lott_conf = confirm("Are you sure? Buying a lottery ticket costs $25.");
-      if (!lott_conf) return;
 
       if (lott_conf) {
         if (money < 25) { alert("ur too broke to play the lottery"); return; };
         money -= 25;
         ticket_num++;
-    }
+    } else return;
 
     save();
     printInfos();
@@ -248,6 +247,7 @@
       }
     }
     reroll();
+    ticket_num--;
     const num_1 = lottery_number.join(' ');
     const num_2 = winning_number.join(' ');
 
