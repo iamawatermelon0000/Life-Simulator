@@ -19,6 +19,19 @@
         if (action === "Spend time") spendTime();
         if (action === "Beg for money") beg();
         if (action === "Iron your clothes") iron();
+        if (action === "Change Name") {
+          const conf_name = confirm("Are you sure? this will cost $1000.");
+          if (!conf_name) return;
+
+          money -= 1000;
+          rerollName();
+        }
+        if (action === "Request a Raise") {
+          if (Math.random() < 0.03) income += Math.floor(Math.random() * (150 + 10 + 1) + 10);
+          alert("lucky guy, eh?");
+        } else {
+          alert("Rejected!");
+        }
 
         on_cd = true;
 
@@ -29,6 +42,9 @@
       setTimeout(() => {
         on_cd = false;
       }, 1500);
+
+      save();
+      printInfos();
     }
 
     const all_func = [
@@ -37,6 +53,8 @@
       eat,
       play,
       spendTime,
+      beg,
+      iron,
       "robbed",
       "found a lost wallet",
       "free food"
