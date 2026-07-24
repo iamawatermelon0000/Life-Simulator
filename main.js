@@ -166,7 +166,7 @@
           iEvent = 0;
         }
 
-        if (iRent >= 30 && age >= 16) {
+        if (iRent >= 30 && age >= 16 && curr_job !== "None") {
           rent = Math.floor(Math.random() * (1000 - 100 + 1) + 100);
           unpaid_rent += rent;
 
