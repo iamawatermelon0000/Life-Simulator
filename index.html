@@ -13,6 +13,7 @@
   <script src="rent.js" defer></script>
   <script src="save_and_render.js" defer></script>
   <script src="anti_cheat.js" defer></script>
+  <script src="rebirth.js" defer></script>
 
   <link rel="stylesheet" href="style.css">
 </head>
@@ -119,7 +120,17 @@
       <button type="button" onclick="buyItem()">Confirm purchase</button>
     </div>
 
+      <div id="rebirth">Rebirth thingys:
+    <button type="button" id="rebirthBTN" onclick="rebirth()" disabled readonly>Rebirth Here!</button>
+
+    <p id="RebirthableAge">You can rebirth at age:</p>
+    <p id="rebirthToken">Your total rebirth token(s):</p>
+    <p id="currentMultiplier">Your current multiplier:</p>
+    <h3 id="timesRebirthed">You've rebirthed X times in total.</h3>
   </div>
+
+  </div>
+
 
   <div id="startingScreen">
     <button id="startGame" type="button" onclick="begin()">Start</button>
