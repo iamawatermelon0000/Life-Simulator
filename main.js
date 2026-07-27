@@ -4,8 +4,8 @@
     const very_important_variable = "nothings here";
     const existing_variable = "exsiting";
 
-    let debugging = localStorage.getItem("debugging") == "true";
-    let cheated = localStorage.getItem("cheated") == "true";
+    let debugging = localStorage.getItem("debugging.KEEP") == "true";
+    let cheated = localStorage.getItem("cheated.KEEP") == "true";
     //                                                                                                    //
 
     /* SELECTS, BUTTONS */
@@ -20,7 +20,6 @@
     let prName = document.getElementById("name");
 
     let money = Number(localStorage.getItem("money") || 0);
-    let multiplier = Number(localStorage.getItem("multiplier") || 1);
     let prMoney = document.getElementById("money");
 
     /* STATUSES */
@@ -178,9 +177,19 @@
           location.replace("second_window.html");
         }
 
-        // if (age >= 100) clearInterval(iAll);
-        /// const conf_rebirth = confirm("You've reached age 100, rebirth?")
-        // if (conf_rebirth) {wipeData(); localStorage.clear(); localtion.reload();} else return;
+        if (age >= rebirthable_age) {
+          if (iAll) clearInterval(iAll);
+          const conf_rebirth = confirm(`You've reached age 100, rebirth? Rebirthing will increase your current money multiplier by 0.5, current multiplier: ${multiplier}`);
+
+          if (conf_rebirth) {
+            rebirth_btn.disabled = false;
+          } else {
+            alert("You can rebirth anytime by clicking the rebirth button at the end!");
+            rebirth_btn.disabled = false;
+          }
+        } else {
+          rebirth_btn.disabled = true;
+        }
 
         energy = Number(energy.toFixed(0));
         hunger = Number(hunger.toFixed(0));
@@ -236,40 +245,9 @@
         }
     }
 
-    function wipeData() {
-        age=0
-        happiness=100
-        energy=100
-        hunger=0
-        money = 0
-
-        age_value=60
-        hunger_value =60
-        happiness_value=60
-        energy_value=60
-
-        max_energy = 100
-        max_happiness = 100
-        min_hunger = 0
-
-        save();
-    }
-    function devOnly(){debugging=true;save();printInfos();};
-
-    document.addEventListener("DOMContentLoaded", () => {
-
-      buttons.forEach(b => {
-        b.disabled = true;
-      });
-      buttons[7].disabled = false;
-
-      selects.forEach(s => {
-        s.disabled = true;
-      });
-    });
+    function devOnly(){debugging=true,save(),printInfos()}
 
     const upcoming_plans_no_see_for_dev_only = [
-      "rebirth, upgrades will cost rebirth tokens, player can only rebirth at the age of 100, increasing every rebirth by 5, gains more money multiplier (max: 10x = ~20 rebirths), base mult: 1, +0.5 every rebirth", // potential
       "intelligence, allowing more jobs with higher incomes, actions that can increases intelligence: code, read a book, study,...", // easy, new thing, coming soonest
       "more items", // coming soonest
       "relationships, increase or decrease happiness/ stats depending on how you treat them",
