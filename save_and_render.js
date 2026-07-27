@@ -3,7 +3,11 @@
       localStorage.setItem("age", age);
       localStorage.setItem("pname", JSON.stringify(pname));
       localStorage.setItem("money", money);
-      localStorage.setItem("multiplier", multiplier);
+
+      localStorage.setItem("multiplier.KEEP", multiplier);
+      localStorage.setItem("rebirthToken.KEEP", rebirth_token);
+      localStorage.setItem("rebirthableAge.KEEP", rebirthable_age);
+      localStorage.setItem("timeRebirth.KEEP", time_rebirth);
 
       localStorage.setItem("job", curr_job);
       localStorage.setItem("income", income);
@@ -33,10 +37,9 @@
 
       localStorage.setItem("ticketNum", ticket_num);
 
-      localStorage.setItem("debugging", debugging);
-      localStorage.setItem("cheated", cheated);
+      localStorage.setItem("debugging.KEEP", debugging);
+      localStorage.setItem("cheated.KEEP", cheated);
     };
-
     /* PRINT INFOS */
     function printInfos() {
       prName.textContent = `Name: ${pname}`;
@@ -54,7 +57,7 @@
       pgHg.value = hunger;
       pgHp.value = happiness;
 
-      prUpgrades.innerHTML = `After Upgrades:<br>[+1 Age/ ${age_value}s], [+ 1 Hunger/ ${hunger_value}s], [- 1 Happiness/ ${happiness_value}s], [- 1 Energy/ ${energy_value}s]<br>[Max Energy: ${max_energy}], [Max Happiness: ${max_happiness}], [Min hunger: ${min_hunger}]`;
+      prUpgrades.innerHTML = `After Upgrades:<br>[+1 Age/ ${age_value}s], [+ 1 Hunger/ ${hunger_value}s], [- 1 Happiness/ ${happiness_value}s], [- 1 Energy/ ${energy_value}s]<br>[Max Energy: ${max_energy}], [Max Happiness: ${max_happiness}], [Min hunger: -${min_hunger}]`;
 
       prRent.textContent = `Current rent: ${rent}`;
       prUnpaid.textContent = `Total Unpaid Rent: ${unpaid_rent}`
@@ -62,5 +65,10 @@
       prAllItem.textContent = `Every items that you've bought: ${bought_logging_list.join(', ') || "None"}`;
 
       prTicket_Num.textContent = `Your number of tickets: ${ticket_num || 0}`;
+
+      prRebirthable.textContent = `You can rebirth at age: ${rebirthable_age}`;
+      prRebirthToken.textContent = `Your total rebirth token(s): ${rebirth_token}`;
+      prMultiplier.textContent = `Your current multiplier: ${multiplier || 1}`;
+      prTimeRebirthed.textContent = `You've rebirthed ${time_rebirth} in total.`;
     }
 
