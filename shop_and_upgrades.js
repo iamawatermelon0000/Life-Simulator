@@ -116,9 +116,7 @@
     function buyItem() {
 
       let item = item_list.value;
-
       if (item === "None" || !item) return;
-      (document.getElementById("boughtItem").textContent = `You bought: ${item}`);
 
       if (item === "gb") {
 
@@ -201,6 +199,7 @@
       };
 
       bought_logging_list.push(bought_item);
+      (document.getElementById("boughtItem").textContent = `You bought: ${bought_item}`);
 
       save();
       printInfos();
