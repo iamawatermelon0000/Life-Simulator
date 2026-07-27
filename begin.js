@@ -1,5 +1,6 @@
     /* BEGINNING */
-    const b = document.getElementById("startGame");
+    const btn = document.getElementById("startGame");
+    const rebirth_btn = document.getElementById("rebirthBTN");
     let started = false;
 
     function begin() {
@@ -13,7 +14,7 @@
       startMain();
       save();
 
-      b.remove();
+      btn.remove();
       starting.remove();
 
       if (!cheated) {
@@ -31,11 +32,13 @@
     };
 
     document.addEventListener("DOMContentLoaded", () => {
+      console.log("begin.js performed: disable_buttons")
       buttons.forEach(b => {
         b.disabled = true;
+        console.log(b.disabled);
       });
-      b.disabled = false;
-      buttons[buttons.length - 2].disabled = true;
+      btn.disabled = false;
+      rebirth_btn.disabled = true;
 
       selects.forEach(s => {
         s.disabled = true;
