@@ -1,13 +1,11 @@
 # Life Simulator
 ---
 ## Description
----
 - new repo for Life Simulator<br>
 - the old one has imploded due to various bugs<br>
 - dont try to cheat...<br>
 
 ## Main
--------
 ### About
 ---
 - Made by: @iamawatermelon0000<br>
@@ -20,7 +18,6 @@
 ### Updates
 ---
 #### Version - Update
----------------------
 **1.0.0 - Release**<br>
 **1.0.2 to 1.1.0 - Bug fixes, optimization, updated files**<br>
 **1.1.2 - Multiplier, Rebirth incoming!**<br>
@@ -30,7 +27,7 @@
 **1.3.0 - REBIRTHS!**<br>
 **1.4.0 - Added an in-built update logs and roadmap viewer (alongside with this README)!!!**<br>
 **1.4.2 - Added 1 item: "Therapy Session", costs 100k to 250k; More info ingame!!!!**<br>
-**1.4.5 (GITHUB update) - Added 2 brand new files: roadmap and update_logs (both are .html)**<br>
+**1.4.5 (GITHUB update) - Added 2 brand new files: roadmap and update_logs (both are .html), edited README and suggestions (both are .md)**<br>
 
 ### Notes
 ---------
