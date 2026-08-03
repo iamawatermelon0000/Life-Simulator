@@ -196,7 +196,26 @@
         age += 1;
         money -= age_price;
         bought_item = "Clock";
-      };
+
+      } else if (item === "ts") { // holy typescript reference
+
+        const therapy_session_price = Math.floor(Math.random() * (250000 - 100000 + 1) + 100000);
+        if (money < therapy_session_price) {
+      alert(`The therapist wants ${therapy_session_price} for it, while ur broke and only have ${money}`);
+          return;
+        }
+
+        money -= therapy_session_price;
+        happiness += 100;
+        hunger += 10;
+
+        happiness_value += 10;
+        startMain();
+
+        const hpv_timeout = setTimeout(() => {
+          happiness_value -= 10;
+        }, 20000);
+      }
 
       bought_logging_list.push(bought_item);
       (document.getElementById("boughtItem").textContent = `You bought: ${bought_item}`);
