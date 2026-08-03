@@ -114,6 +114,9 @@
 
         <option value="c">Clock [(Increases age by 1), (Price Increases by 75% of your age)]</option>
         <!--base: 2.5k-->
+
+        <option value="ts">Therapy session (Increases happiness by 100, reduces happiness lost by 10s for 20s; you can only use this when your happiness is below 10)</option>
+        <!--100k to 250k-->
       </select>
       <p id="boughtItem">You didn't buy anything!</p>
       <p id="allBoughtItems">Every items that you've bought:</p>
@@ -121,7 +124,7 @@
     </div>
 
       <div id="rebirth">Rebirth thingys:
-    <button type="button" id="rebirthBTN" onclick="rebirth()" disabled readonly>Rebirth Here!</button>
+    <button type="button" id="rebirthBTN" onclick="rebirth()" disabled>Rebirth Here!</button>
 
     <p id="RebirthableAge">You can rebirth at age:</p>
     <p id="rebirthToken">Your total rebirth token(s):</p>
@@ -134,6 +137,8 @@
 
   <div id="startingScreen">
     <button id="startGame" type="button" onclick="begin()">Start</button>
+    <button type="button" onclick="window.location.href = 'roadmap.html'">View roadmap</button>
+    <button type="button" onclick="window.location.href = 'update_logs.html'">View update logs</button>
   </div>
 
 </body>
