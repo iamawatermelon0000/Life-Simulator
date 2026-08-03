@@ -2,7 +2,7 @@
 ---
 ## Description
 - new repo for Life Simulator<br>
-- the old one has imploded due to various bugs<br>
+- the old repo has imploded due to various bugs<br>
 - dont try to cheat...<br>
 
 ## Main
@@ -28,6 +28,8 @@
 **1.4.0 - Added an in-built update logs and roadmap viewer (alongside with this README)!!!**<br>
 **1.4.2 - Added 1 item: "Therapy Session", costs 100k to 250k; More info ingame!!!!**<br>
 **1.4.5 (GITHUB update) - Added 2 brand new files: roadmap and update_logs (both are .html), edited README and suggestions (both are .md)**<br>
+**1.4.6 - Various bug fixes**<br>
+**1.4.8 - Edited update_logs and roadmap (both are .html)**<br>
 
 ### Notes
 ---------
