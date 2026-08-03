@@ -27,11 +27,18 @@
           rerollName();
         }
         if (action === "Request a Raise") {
-          if (Math.random() < 0.03) income += Math.floor(Math.random() * (150 + 10 + 1) + 10);
+
+          if (Math.random() < 0.03) {
+            
+          income += Math.floor(Math.random() * (150 + 10 + 1) + 10);
           alert("lucky guy, eh?");
-        } else {
-          alert("Rejected!");
+
+          } else {
+          alert("Raise request rejected!");
         }
+
+        }
+
 
         on_cd = true;
 
