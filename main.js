@@ -197,10 +197,10 @@
 
         if (energy <= 0) energy = 0;
         if (happiness <= 0) happiness = 0;
-        if (hunger < -min_hunger) hunger = 0;
+        if (hunger < -min_hunger) hunger = -min_hunger;
 
-        if (energy >= max_energy) energy = 100;
-        if (happiness >= max_happiness) happiness = 100;
+        if (energy >= max_energy) energy = max_energy;
+        if (happiness >= max_happiness) happiness = max_happiness;
         if (hunger >= 100) hunger = 100;
 
         save();
