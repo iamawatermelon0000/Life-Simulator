@@ -24,8 +24,7 @@
     }
 
     body,
-    #container1,
-    #startingScreen {
+    #container1 {
       flex-direction: column;
       gap: 50px;
     }
@@ -65,7 +64,8 @@
       border-radius: 100%;
     }
 
-    button:hover, select:hover {
+    button:hover,
+    select:hover {
       background: #FFFFFF;
       box-shadow: 0 0 40px 20px #FFFFFF;
     }
