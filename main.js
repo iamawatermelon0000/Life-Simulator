@@ -246,11 +246,3 @@
     }
 
     function devOnly(){debugging=true,save(),printInfos()}
-
-    const upcoming_plans_no_see_for_dev_only = [
-      "intelligence, allowing more jobs with higher incomes, actions that can increases intelligence: code, read a book, study,...", // easy, new thing, coming soonest
-      "more items", // coming soonest
-      "relationships, increase or decrease happiness/ stats depending on how you treat them",
-      "ECONOMY REWORK", // balancing prices, money gaining
-    ];
-    // ^ Roadmap
