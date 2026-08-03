@@ -215,6 +215,8 @@
         const hpv_timeout = setTimeout(() => {
           happiness_value -= 10;
         }, 20000);
+
+        bought_item = "Therapy Session";
       }
 
       bought_logging_list.push(bought_item);
