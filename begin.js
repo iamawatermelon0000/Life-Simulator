@@ -15,7 +15,6 @@
       save();
 
       btn.remove();
-      starting.remove();
 
       if (!cheated) {
       buttons.forEach(b => {
