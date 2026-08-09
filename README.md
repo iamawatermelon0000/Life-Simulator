@@ -2,7 +2,7 @@
 ---
 ## Description
 - new repo for Life Simulator<br>
-- the old repo has imploded due to various bugs<br>
+- the repo one has imploded due to various bugs<br>
 - dont try to cheat...<br>
 
 ## Main
@@ -11,8 +11,8 @@
 - Made by: @iamawatermelon0000<br>
 - Project Name: Life Simulator<br>
 - Made on: 07/23/2026<br>
-- Last updated on: 08/03/2026 8:43PM GMT+7 (Southeast Asia)<br>
-*<sub>or August 3rd 2026 for my fellow Asians</sub>*
+- Last updated on: 08/09/2026 7:07PM GMT+7 (Southeast Asia)<br>
+*<sub>or August 9th, 2026 for my fellow Asians</sub>*
 - Total files: approx. 14 files (including README)<br>
 
 ### Updates
@@ -30,6 +30,7 @@
 **1.4.5 (GITHUB update) - Added 2 brand new files: roadmap and update_logs (both are .html), edited README and suggestions (both are .md)**<br>
 **1.4.6 - Various bug fixes**<br>
 **1.4.8 - Edited update_logs and roadmap (both are .html)**<br>
+**1.5 - Added a timer (only active after this update) and fixed various bugs**<br>
 
 ### Notes
 ---------
