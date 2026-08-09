@@ -31,14 +31,13 @@
 **1.4.6 - Various bug fixes**<br>
 **1.4.8 - Edited update_logs and roadmap (both are .html)**<br>
 **1.5 - Added a timer (only active after this update) and fixed various bugs**<br>
-**(Github update) - Removed suggestions.md (nobody uses it :[ )**<br>
+**(Github update) - Removed suggestions.md (nobody uses it :[ ) and updated Notes**<br>
 
 
 ### Notes
 ---------
 - If you got banned by the anticheat, contact @iamawatermelon0000 on Discord<br>
-- pls report any bugs that you've found, thatll help me a ton, ty!<br>
-- if you have any suggestions, remember to share it to me too!<br>
-- if you can, please send me suggestions in the SUGGESTIONS.md<br>
+- If you've found any bugs, let me know so I can fix it! (or keep it as a feature idk)<br>
+- If you have any suggestions, remember to let me know too!<br>
 - github updates will not be logged in update_logs.html<br>
 - i got a new adapter<br>
