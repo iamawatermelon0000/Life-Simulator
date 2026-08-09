@@ -13,7 +13,7 @@
 - Made on: 07/23/2026<br>
 - Last updated on: 08/09/2026 7:07PM GMT+7 (Southeast Asia)<br>
 *<sub>or August 9th, 2026 for my fellow Asians</sub>*
-- Total files: approx. 14 files (including README)<br>
+- Total files: approx. 13 files (including README)<br>
 
 ### Updates
 ---
@@ -27,10 +27,12 @@
 **1.3.0 - REBIRTHS!**<br>
 **1.4.0 - Added an in-built update logs and roadmap viewer (alongside with this README)!!!**<br>
 **1.4.2 - Added 1 item: "Therapy Session", costs 100k to 250k; More info ingame!!!!**<br>
-**1.4.5 (GITHUB update) - Added 2 brand new files: roadmap and update_logs (both are .html), edited README and suggestions (both are .md)**<br>
+**(GITHUB update) - Added 2 brand new files: roadmap and update_logs (both are .html), edited README and suggestions (both are .md)**<br>
 **1.4.6 - Various bug fixes**<br>
 **1.4.8 - Edited update_logs and roadmap (both are .html)**<br>
 **1.5 - Added a timer (only active after this update) and fixed various bugs**<br>
+**(Github update) - Removed suggestions.md (nobody uses it :[ )**<br>
+
 
 ### Notes
 ---------
