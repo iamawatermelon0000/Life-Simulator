@@ -39,6 +39,10 @@
 
       localStorage.setItem("debugging.KEEP", debugging);
       localStorage.setItem("cheated.KEEP", cheated);
+
+      localStorage.setItem("sec_time", sec_time);
+      localStorage.setItem("min_time", min_time);
+      localStorage.setItem("hr_time", hr_time);
     };
     /* PRINT INFOS */
     function printInfos() {
@@ -70,5 +74,7 @@
       prRebirthToken.textContent = `Your total rebirth token(s): ${rebirth_token}`;
       prMultiplier.textContent = `Your current multiplier: ${multiplier || 1}`;
       prTimeRebirthed.textContent = `You've rebirthed ${time_rebirth} in total.`;
+
+      prTime.innerHTML = `You've been here for:<br>${hr_time.toString().padStart(2, "0")}:${min_time.toString().padStart(2, "0")}:${sec_time.toString().padStart(2, "0")}`;
     }
 
