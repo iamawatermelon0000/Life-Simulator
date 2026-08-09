@@ -39,3 +39,4 @@
 - if you have any suggestions, remember to share it to me too!<br>
 - if you can, please send me suggestions in the SUGGESTIONS.md<br>
 - github updates will not be logged in update_logs.html<br>
+- i got a new adapter<br>
