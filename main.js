@@ -51,6 +51,14 @@
 
     let iAll;
     let iSal;
+    let iTime;
+
+    /* TIMER */
+    /** jsdoc comment syntax */
+    const prTime = document.getElementById("timer");
+    let sec_time = Number(localStorage.getItem("sec_time") || 0); // second
+    let min_time = Number(localStorage.getItem("min_time") || 0); // minutes
+    let hr_time = Number(localStorage.getItem("hr_time") || 0); // hours
 
     /* MAIN */
     let punished = false;
@@ -243,6 +251,30 @@
         if (happiness <= 0 || hunger >= 100 || energy <= 0) {
           document.body.style.background = "black";
         }
+    }
+
+    function updateTime() {
+
+      if (iTime) clearInterval(iTime);
+
+      iTime = setInterval(() => {
+
+        sec_time++;
+
+        if (sec_time % 60 === 0 && sec_time > 0) {
+          min_time++;
+          sec_time = 0;
+        }
+
+        if (min_time % 60 === 0 && min_time > 0) {
+          hr_time++;
+          min_time = 0;
+        }
+
+        save();
+        printInfos();
+
+      }, 1000);
     }
 
     function devOnly(){debugging=true,save(),printInfos()}
