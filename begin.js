@@ -2,6 +2,7 @@
     const btn = document.getElementById("startGame");
     const rebirth_btn = document.getElementById("rebirthBTN");
     let started = false;
+    let changing = false;
 
     function begin() {
 
@@ -12,6 +13,7 @@
       printInfos();
       if (pname.length <= 0) rerollName();
       startMain();
+      updateTime();
       save();
 
       btn.remove();
@@ -67,7 +69,8 @@
 
 /* REROLL NAME */
     function rerollName() {
-      if (pname.length === 0) {
+      if (pname.length === 0  || changing) {
+        pname = [];
         pname.push(f_names[Math.floor(Math.random() * f_names.length)]);
         pname.push(l_names[Math.floor(Math.random() * l_names.length)]);
         pname = pname.join(" ");
