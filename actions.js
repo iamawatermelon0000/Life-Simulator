@@ -12,6 +12,8 @@
           return;
         }
 
+        if (action === "(None)" || action === "---") return;
+
         if (action === "Cry") cry();
         if (action === "Sleep") sleep();
         if (action === "Eat") eat();
@@ -24,12 +26,17 @@
           if (!conf_name) return;
 
           money -= 1000;
+          changing = true;
           rerollName();
+
+          setTimeout(() => {
+            changing = false
+          }, 500);
         }
         if (action === "Request a Raise") {
 
           if (Math.random() < 0.03) {
-            
+
           income += Math.floor(Math.random() * (150 + 10 + 1) + 10);
           alert("lucky guy, eh?");
 
