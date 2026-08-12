@@ -8,7 +8,9 @@
     #career,
     #shop,
     #rent,
-    #lottery {
+    #lottery,
+    #rebirthShopDIV,
+    #rebirth {
       display: flex;
       justify-content: center;
       align-items: center;
