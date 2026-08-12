@@ -4,7 +4,8 @@ function checkValid() {
             !Number.isFinite(hunger) ||
             !Number.isFinite(energy) ||
             !Number.isFinite(happiness) ||
-            money > 1e9 || energy > 1e9 || hunger < -1e9 || happiness > 1e9)
+            !Number.isFinite(rebirth_token) ||
+            money > 1e9 || energy > 1e9 || hunger < -1e9 || happiness > 1e9 || rebirth_token > 1000)
             && !debugging) {
           cheated = true;
         }
