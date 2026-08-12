@@ -123,14 +123,32 @@
       <button type="button" onclick="buyItem()">Confirm purchase</button>
     </div>
 
-      <div id="rebirth">Rebirth thingys:
+      <div id="rebirth">Rebirth Options:
     <button type="button" id="rebirthBTN" onclick="rebirth()" disabled>Rebirth Here!</button>
 
     <p id="RebirthableAge">You can rebirth at age:</p>
     <p id="rebirthToken">Your total rebirth token(s):</p>
     <p id="currentMultiplier">Your current multiplier:</p>
     <h3 id="timesRebirthed">You've rebirthed X times in total.</h3>
-  </div>
+    </div>
+
+    <div id="rebirthShopDIV">Rebirth shop
+
+    <select id="rebirthShop" title="Cost rebirth tokens">Rebirth shop:
+      <option value="mm:2t" title="Increases current multiplier by 0.25">_ BUSINESS PERSON _: 2 tokens</option>
+
+      <option value="irt:2t" title="You only need to pay rent every 60s (BUYING MORE WILL NOT GRANT YOU ANY MORE PERKS)">_ NICE HOMEOWNER _: 2 tokens</option>
+
+      <option value="dra:4t" title="Decreases the age when you can rebirth by 10 (1 TIME ONLY)">_ EXPERIENCED_:4 tokens</option>
+
+      <option value="ims:5t" title="Increases Max Energy, Max Happiness and Min Hunger by 10 (ONLY AVAIABLE 1 TIME FOR EACH LIFE)">_ HEALTHY BODY _: 5 tokens</option>
+
+      <option value="(((???:999)))" title="Request a ___???___ (not avaiable yet)">? __?__ ? : 999 tokens</option>
+      <sub>^ larp larp larp ik ^</sub>
+    </select>
+    <button type="button" onclick="buyRebirthItem()">Buy Item</button>
+
+    </div>
 
   </div>
 
