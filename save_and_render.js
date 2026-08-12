@@ -34,6 +34,7 @@
       localStorage.setItem("energyVal", energy_value);
 
       localStorage.setItem("unpaidRent", unpaid_rent);
+      localStorage.setItem("rentTime", rentTime);
 
       localStorage.setItem("ticketNum", ticket_num);
 
@@ -43,6 +44,10 @@
       localStorage.setItem("sec_time", sec_time);
       localStorage.setItem("min_time", min_time);
       localStorage.setItem("hr_time", hr_time);
+
+      localStorage.setItem("purchased_", purchased_);
+      localStorage.setItem("purchased__", purchased__);
+      localStorage.setItem("purchased___", purchased___);
     };
     /* PRINT INFOS */
     function printInfos() {
