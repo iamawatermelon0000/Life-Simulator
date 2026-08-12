@@ -43,8 +43,10 @@
     let iHappy = 0;
     let iEnergy = 0;
     let iEvent = 0;
-    let iRent = 0;
     let iSystem = 0;
+
+    let iRent = 0;
+    let rentTime = Number(localStorage.getItem("rentTime") || 30);
 
     let iIdle = 0;
     let idle_value;
@@ -173,7 +175,7 @@
           iEvent = 0;
         }
 
-        if (iRent >= 30 && age >= 16 && curr_job !== "None") {
+        if (iRent >= rentTime && age >= 16 && curr_job !== "None") {
           rent = Math.floor(Math.random() * (1000 - 100 + 1) + 100);
           unpaid_rent += rent;
 
