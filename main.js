@@ -201,9 +201,9 @@
           rebirth_btn.disabled = true;
         }
 
-        energy = Number(energy.toFixed(0));
-        hunger = Number(hunger.toFixed(0));
-        happiness = Number(happiness.toFixed(0));
+        energy = parseInt(energy);
+        hunger = parseInt(hunger);
+        happiness = parseInt(happiness);
 
         if (energy <= 0) energy = 0;
         if (happiness <= 0) happiness = 0;
