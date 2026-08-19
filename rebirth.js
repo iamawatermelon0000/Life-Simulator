@@ -6,6 +6,7 @@
     let purchased__ = localStorage.getItem("purchased__") == "true";
     let purchased_ = localStorage.getItem("purchased_") == "true";
     let purchased___ = localStorage.getItem("purchased___") == "true";
+    let __purchased__ = localStorage.getItem("__purchased__") == "true";
 
     const prRebirthable = document.getElementById("RebirthableAge");
     const prRebirthToken = document.getElementById("rebirthToken");
@@ -74,6 +75,42 @@
         min_hunger += 10;
 
         purchased___ = true;
+      }
+
+      if (rebirth_item === "(((???:999)))" && rebirth_token >= 999 && !__purchased__) {
+
+        clearInterval(iAll);
+        __purchased__ = true;
+        document.body.innerHTML = "";
+        rebirth_token-=999;
+
+        setTimeout(() => {
+
+        console.log("preparing...");
+        alert("How did we get here?");
+        alert("It's been a long journey...");
+        alert("Thank you for playing my biggest project yet - Life Simulator.");
+        console.log("requesting...");
+
+        setTimeout(() => {
+
+        console.log("succeed!");
+        console.log("fetching...");
+        document.body.innerHTML += "<div style='color: black; text-align: center; border: 2px solid black;'><h1>LIFE SIMULATOR _ CREDITS</h1><br><br><h2>Made on: 2026; by: iamawatermelon0000</h2><br><h2>Thank you to those who supported me along the way of me making this game. I really appreciate everything. Thank you so so much! ;-)</h2><br><sub>Don't worry, updates are still coming, but when someone actually got this, it might be over, thanks once again! :D</sub><br><br><button type='button' onclick='location.reload()'>Return to your current gameplay!</button></div>";
+        console.log("checking output...");
+        console.log("all good, checkpoint reached, please take a rest now.!");
+
+        multiplier += 5;
+
+        }, 2500);
+      }, 16);
+
+      age = (rebirthable_age + 1);
+      rebirth();
+
+      save();
+      printInfos();
+
       }
 
       save();
