@@ -48,7 +48,7 @@
       localStorage.setItem("purchased_", purchased_);
       localStorage.setItem("purchased__", purchased__);
       localStorage.setItem("purchased___", purchased___);
-      localStorage.setItem("__purchased", __purchased__);
+      localStorage.setItem("__purchased__", __purchased__);
     };
     /* PRINT INFOS */
     function printInfos() {
