@@ -33,7 +33,7 @@
     function job() {
       if (age < 16) { prJobStat.textContent = "You're too young!"; return; }
 
-      if (curr_job !== "None" && age < 16 && !debugging) cheated = true; save(); location.reload();
+      if (curr_job !== "None" && age < 16 && !debugging) { cheated = true; save(); location.reload(); }
       if (curr_job !== "None" && !change_active) {
         alert("You already have a job!");
         let cf_2 = confirm("Do you wanna change to another job?");
