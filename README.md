@@ -11,8 +11,8 @@
 - Made by: @iamawatermelon0000<br>
 - Project Name: Life Simulator<br>
 - Made on: 07/23/2026<br>
-- Last updated on: 08/12/2026 8:25PM GMT+7 (Southeast Asia)<br>
-*<sub>or August 12nd, 2026 for my fellow Asians</sub>*
+- Last updated on: 08/19/2026 8:34PM GMT+7 (Southeast Asia)<br>
+*<sub>or August 19th, 2026 for my fellow Asians</sub>*
 - Total files: approx. 13 files (including README)<br>
 
 ### Updates
@@ -33,6 +33,7 @@
 **1.5 - Added a timer (only active after this update) and fixed various bugs**<br>
 **(Github update) - Removed suggestions.md (nobody uses it :[ ) and updated Notes**<br>
 **1.5.3 - Rebirth Shop!**<br><br>
+**1.6.0 - Endgame Rebirth Item and bug fixes**<br><br>
 
 
 ### Notes
@@ -42,5 +43,7 @@
 - If you have any suggestions, remember to let me know too!<br>
 - github updates will not be logged in update_logs.html<br>
 - i got a new adapter<br>
-<sub>(^ and v) not related but idk i wanna add it</sub>
+<sub>(^ and v) not related but i wanna add it here</sub>
 - rebirth balancing will be coming soon<br>
+- dm me the word "gentlemelon" for a suprise<br>
+- thank you for playing!<br>
