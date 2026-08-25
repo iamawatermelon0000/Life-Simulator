@@ -80,16 +80,19 @@
 
     <div id="upgrade">Upgrades:
 
-      <select id="upgrades">
+      <select id="upgrades" title="Pernament until next rebirth">
         <option value="none">None</option>
-        <option value="en">Energy (Reduces Energy lost, 75k each)</option>
-        <option value="hp">Happiness (Reduces Happiness lost, 50k each)</option>
-        <option value="age">Age (Reduces aging time, 100k each)</option>
+        <option>-Reduce Time-</option>
+        <option value="en">Energy (Reduces Energy lost, 50k each)</option>
+        <option value="hp">Happiness (Reduces Happiness lost, 45k each)</option>
+        <option value="age">Age (Reduces aging time, 75k each)</option>
         <option value="hg">Hunger (Reduces hunger gain, 40k each)</option>
-        <option>---</option>
-        <option value="me">Max Energy (increases max energy by 10, max 5; 150k each)</option>
-        <option value="mh">Max Happiness (increases max happiness by 10, max 5; 145k each)</option>
-        <option value="mhun" title="Instead of hunger being capped at 0, you can now get like -50 min hunger">Min Hunger (decreases minimum hunger by 10, max 5; 165k each)</option>
+        <option>-Maxs, Mins-</option>
+        <option value="me">Max Energy (increases max energy by 10, max 5; 95k each)</option>
+        <option value="mh">Max Happiness (increases max happiness by 10, max 5; 85k each)</option>
+        <option value="mhun" title="Instead of hunger being capped at 0, you can now get like -50 min hunger">Min Hunger (decreases minimum hunger by 10, max 5; 100k each)</option>
+        <option>-Items that're pernament until next rebirth-</option>
+        <option value="pc" title="You'll gain 2 happiness every time you lose 1 (interval)">Gaming PC (50k,can only purchased <h2>ONCE</h2>)</option>
       </select>
 
       <button type="button" onclick="buyUpgrades()">Buy</button>
