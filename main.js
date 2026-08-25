@@ -150,8 +150,11 @@
           hunger++;
           iHunger = 0;
         }
-        if (iHappy >= happiness_value) {
+        if (iHappy >= happiness_value && !bought_pc) {
           happiness--;
+          iHappy = 0;
+        } else if (iHappy >= happiness_value && bought_pc) {
+          happiness++;
           iHappy = 0;
         }
 
