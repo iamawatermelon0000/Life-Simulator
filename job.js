@@ -1,108 +1,166 @@
-/* JOBS */
+<!DOCTYPE html>
+<html lang="en">
 
-/* JOB VARIABLES */
-    const jobs = [
-      "Yard Cleaner",
-      "Window Wiper",
-      "Lawn Mowing",
-      "Leaf BLowing",
-      "Waiter",
-      "Office Worker",
-      "9-5",
-      "Intern Mechanic",
-      "Technician",
-      "Chef",
-      "IT",
-      "Nurse",
-      "Doctor",
-      "Police Officier",
-      "Boxer",
-      "watermeloner"
-    ];
-    let all_jobs = [...jobs];
-    let index;
-    let curr_job = localStorage.getItem("job") || "None";
-    let income = Number(localStorage.getItem("income") || 0); // per 30-60 seconds
-    let salary = Number(localStorage.getItem("salary") || 1);
+<head>
+  <title msg="this project is long as heck">life. (an idle game ig)</title>
 
-    let prJob = document.getElementById("job");
-    let prInc = document.getElementById("income");
-    let prJobStat = document.getElementById("jobStatus");
+  <script src="begin.js" defer></script>
+  <script src="main.js" defer></script>
+  <script src="actions.js" defer></script>
+  <script src="events.js" defer></script>
+  <script src="job.js" defer></script>
+  <script src="shop_and_upgrades.js" defer></script>
+  <script src="rent.js" defer></script>
+  <script src="save_and_render.js" defer></script>
+  <script src="anti_cheat.js" defer></script>
+  <script src="rebirth.js" defer></script>
 
-/* JOB FUNCTION */
-    function job() {
-      if (age < 16) { prJobStat.textContent = "You're too young!"; return; }
+  <link rel="stylesheet" href="style.css">
+</head>
 
-      if (curr_job !== "None" && age < 16 && !debugging) { cheated = true; save(); location.reload(); }
-      if (curr_job !== "None" && !change_active) {
-        alert("You already have a job!");
-        let cf_2 = confirm("Do you wanna change to another job?");
-        if (cf_2) {
-        alert("Since finding jobs are so difficult..");
+<body>
 
-        let cf = confirm(`So switching jobs will cost you x2 your income. Which means if you wanna change jobs right now, it's going to cost you $${income * 2}. Are you sure?`);
-        if (!cf) return;
-        if (money < (income * 2)) { alert("brokie, keep working"); return; }
+  <div id="container1">
 
-        } else {
+    <div id="actions">Actions:
+      <select id="chooseAction">
+        <option>(None)</option>
+        <option>Cry</option>
+        <option>Sleep</option>
+        <option>Eat</option>
+        <option>Play</option>
+        <option>Spend time</option>
+        <option>Beg for money</option>
+        <option>Iron your clothes</option>
+        <option>---</option>
+        <option>Change Name</option>
+        <option>Request a Raise</option>
+      </select>
+      <button type="button" onclick="doActions()">Do action</button>
+    </div>
 
-          let work_hour = prompt(`How much hour do you wanna work? You gain ${income} every hour and loses 10% of your energy every hour. (Please note that you'll get your salary)`);
+    <div id="statistic">Stats:
+      <p id="age">Age:</p>
+      <p id="name">Name:</p>
+      <p id="money">Money:</p>
+    </div>
 
-          if (work_hour === null || work_hour > energy || work_hour < 0) {
-            alert("What are you trying to do?");
-            energy -= (((energy * 10) / 100)).toFixed(0);
-            return;
-          }
+    <div id="rent">Rent:
+      <p id="currentRent">Current Rent:</p>
+      <p id="unpaidRent">Total Unpaid Rent:</p>
+      <button type="button" onclick="payRent()">Pay Rent</button>
+    </div>
 
-          for (let i = 0; i < work_hour; i++) {
+    <div id="career">Career:
+      <button type="button" onclick="job()">Work/ Get a j*b</button>
+      <p id="job">Job:</p>
+      <p id="jobStatus">[Statues will be printed here]</p>
+      <p id="income">Income: $-9999/ -9s</p>
+    </div>
 
-            energy = (energy * 10 / 100);
+    <div id="status">Status:
+      <p id="energy">Energy:</p>
+      <progress id="enProg" value="0" max="100"></progress>
 
-            if (energy < 0) {
-              alert("You got too tired and fell asleep while working...");
-              alert("You got punished for your actions");
+      <p id="hunger">Hunger:</p>
+      <progress id="hgProg" max="100"></progress>
 
-              money -= 1000;
-              break;
-              return;
-            }
-            money += (income * multiplier);
+      <p id="happy">Happiness:</p>
+      <progress id="hpProg" max="100"></progress>
+    </div>
 
-            if (Math.random() < 0.2) {
-              rerollWorkingEvent();
-            }
-          }
+    <div id="lottery">
+      <p id="numOfTickets">Your number of tickets:</p>
+      <p id="ticketNumber">Your ticket number: PLACEHOLDER</p>
+      <p id="winningNumber">Winning ticket number: PLACEHOLDER</p>
 
-          return;
-        }
+      <button type="button" onclick="buyLottery()">Buy a lottery ticket</button>
+      <button type="button" onclick="playLottery()">Play the lottery</button>
+    </div>
 
-        save();
-        printInfos();
-      }
+    <div id="upgrade">Upgrades:
 
-      let conf = confirm("Do you sure want to get a j*b? The income is *FIXED* and cannot be changed unless you get a new job.");
-      if (!conf) return;
-      if (!change_active) money -= income * 2;
+      <select id="upgrades" title="Pernament until next rebirth">
+        <option value="none">None</option>
+        <option>-Reduce Time-</option>
+        <option value="en">Energy (Reduces Energy lost, 50k each)</option>
+        <option value="hp">Happiness (Reduces Happiness lost, 45k each)</option>
+        <option value="age">Age (Reduces aging time, 75k each)</option>
+        <option value="hg">Hunger (Reduces hunger gain, 40k each)</option>
+        <option>-Maxs, Mins-</option>
+        <option value="me">Max Energy (increases max energy by 10, max 5; 95k each)</option>
+        <option value="mh">Max Happiness (increases max happiness by 10, max 5; 85k each)</option>
+        <option value="mhun" title="Instead of hunger being capped at 0, you can now get like -50 min hunger">Min Hunger (decreases minimum hunger by 10, max 5; 100k each)</option>
+        <option>-Items that're pernament until next rebirth-</option>
+        <option value="pc" title="You'll gain 2 happiness every time you lose 1 (interval)">Gaming PC (50k,can only purchased <h2>ONCE</h2>)</option>
+      </select>
 
-      index = Math.floor(Math.random() * all_jobs.length);
-      curr_job = all_jobs[index];
+      <button type="button" onclick="buyUpgrades()">Buy</button>
+      <p id="totalUpgrades">note: in [...: n], n is the time (s)</p>
+    </div>
 
-      all_jobs.splice(index, 1);
-      if (all_jobs.length === 0) all_jobs = [...jobs];
+    <div id="shop">Shop:
 
-      income = Math.floor(Math.random() * (2000 - 50 + 1) + 50);
-      salary = Math.floor(Math.random() * (60 - 30 + 1) + 30);
+      <select id="item" title="!!! Items will be used as soon as they are bought !!!">
+        <option>None</option>
+        <option value="gb">Ghost Burbur (Gain or Lose hunger by 100, 10k each)</option>
+        <!--10k-->
 
-      if (iSal) clearInterval(iSal);
-      iSal = setInterval(() => {
-        money += (income * multiplier);
-        prJobStat.textContent = `Received ${income}!`
+        <option value="mc">Mysterious Cola (Gains 25 of a random stats)</option>
+        <!--6.9k-->
 
-        save();
-        printInfos();
-      }, salary * 1000);
+        <option value="gl">Gaming laptop (Gains 50 happiness)</option>
+        <!--15k-->
 
-      setTimeout(() => {
-        prJobStat.textContent = "";
-      }, 1500)
-    };
+        <option value="cj">Change Job (Price Gradually Increases)</option>
+        <!--starts at 1k, increases by 1k each time-->
+
+        <option value="c">Clock [(Increases age by 1), (Price Increases by 75% of your age)]</option>
+        <!--base: 2.5k-->
+
+        <option value="ts">Therapy session (Increases happiness by 100, reduces happiness lost by 10s for 20s; you can only use this when your happiness is below 10)</option>
+        <!--100k to 250k-->
+      </select>
+      <p id="boughtItem">You didn't buy anything!</p>
+      <p id="allBoughtItems">Every items that you've bought:</p>
+      <button type="button" onclick="buyItem()">Confirm purchase</button>
+    </div>
+
+      <div id="rebirth">Rebirth Options:
+    <button type="button" id="rebirthBTN" onclick="rebirth()" disabled>Rebirth Here!</button>
+
+    <p id="RebirthableAge">You can rebirth at age:</p>
+    <p id="rebirthToken">Your total rebirth token(s):</p>
+    <p id="currentMultiplier">Your current multiplier:</p>
+    <h3 id="timesRebirthed">You've rebirthed X times in total.</h3>
+    </div>
+
+    <div id="rebirthShopDIV">Rebirth shop
+
+    <select id="rebirthShop" title="Cost rebirth tokens">Rebirth shop:
+      <option value="mm:2t" title="Increases current multiplier by 0.25">_ BUSINESS PERSON _: 2 tokens</option>
+
+      <option value="irt:2t" title="You only need to pay rent every 60s (BUYING MORE WILL NOT GRANT YOU ANY MORE PERKS)">_ NICE HOMEOWNER _: 2 tokens</option>
+
+      <option value="dra:4t" title="Decreases the age when you can rebirth by 10 (1 TIME ONLY)">_ EXPERIENCED_:4 tokens</option>
+
+      <option value="ims:5t" title="Increases Max Energy, Max Happiness and Min Hunger by 10 (ONLY AVAIABLE 1 TIME FOR EACH LIFE)">_ HEALTHY BODY _: 5 tokens</option>
+
+      <option value="(((???:999)))" title="end-game.?">[HTMLObjectElement] : [999] {{Life-Simulator|Curreny:tokens}}</option>
+    </select>
+    <button type="button" onclick="buyRebirthItem()">Buy Item</button>
+
+    </div>
+
+  </div>
+
+
+  <div id="startingScreen">Extras:
+    <p id="timer">You've been here for:<br>PLACEHOLDER:PLACEHOLDER:PLACEHOLDER</p>
+    <button id="startGame" type="button" onclick="begin()">Start</button>
+    <button type="button" onclick="window.location.href = 'roadmap.html'">View roadmap</button>
+    <button type="button" onclick="window.location.href = 'update_logs.html'">View update logs</button>
+  </div>
+
+</body>
+</html>
