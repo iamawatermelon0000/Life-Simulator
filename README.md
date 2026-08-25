@@ -34,6 +34,7 @@
 **(Github update) - Removed suggestions.md (nobody uses it :[ ) and updated Notes**<br>
 **1.5.3 - Rebirth Shop!**<br><br>
 **1.6.0 - Endgame Rebirth Item and bug fixes**<br><br>
+**1.6.5 - ECONOMY REWORKS AND MORE!**<br><br>
 
 
 ### Notes
