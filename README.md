@@ -11,8 +11,8 @@
 - Made by: @iamawatermelon0000<br>
 - Project Name: Life Simulator<br>
 - Made on: 07/23/2026<br>
-- Last updated on: 08/19/2026 8:34PM GMT+7 (Southeast Asia)<br>
-*<sub>or August 19th, 2026 for my fellow Asians</sub>*
+- Last updated on: 08/25/2026 6:47PM GMT+7 (Southeast Asia)<br>
+*<sub>or August 25th, 2026 for my fellow Asians</sub>*
 - Total files: approx. 13 files (including README)<br>
 
 ### Updates
