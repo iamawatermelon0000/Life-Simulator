@@ -139,14 +139,14 @@
       } else if (working === "Customer's Special" && Math.random() < 0.02) {
         prJobStat.textContent = "A rich customer was satisfied by your service, and decided to give you a huge bonus!";
 
-        money += (1000 * multiplier);
+        money += ((Math.floor(Math.random() * (9999 - 1000 + 1) + 1000)) * multiplier);
         hunger += 30;
         energy -= 15;
 
       } else if (working === "Dealt with 100 customer" && Math.random() < 1 / event_pity) {
         prJobStat.textContent = "You've served your 100th customer and got a bonus!";
 
-        money += (Math.floor(Math.random() * (2999 - 1999 + 1) + 1999) * multiplier);
+        money += (Math.floor(Math.random() * (4999 - 1999 + 1) + 1999) * multiplier);
         hunger += 20;
         happiness += 30;
 
@@ -161,7 +161,7 @@
       } else if (working === "Senior Employee" && Math.random() < 0.005) {
         prJobStat.textContent = "You became a senior employee!";
 
-        while (salary < 1500) {
+        while (salary < Math.floor(Math.random() * (2000 - 1500 + 1) + 1500)) {
           salary += 1;
         }
 
