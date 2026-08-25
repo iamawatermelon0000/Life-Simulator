@@ -12,6 +12,8 @@
 
     let prUpgrades = document.getElementById("totalUpgrades");
 
+    let bought_pc = false;
+
 /* FUNCTION */
     function buyUpgrades() {
 
@@ -19,7 +21,7 @@
 
       if (upg === "en") {
 
-        if (money < 75000) { alert("brokie"); return; }
+        if (money < 50000) { alert("brokie"); return; }
 
         energy_value += 5;
         iEnergy = 0;
@@ -32,7 +34,7 @@
 
       if (upg === "hp") {
 
-        if (money < 50000) { alert("ur too broke"); return; }
+        if (money < 45000) { alert("ur too broke"); return; }
 
         happiness_value += 5;
         iHappy = 0;
@@ -45,7 +47,7 @@
 
       if (upg === "age") {
 
-        if (money < 100000) { alert("get a J*B to pay for this"); return; }
+        if (money < 75000) { alert("get a J*B to pay for this"); return; }
 
         age_value -= 20;
         iAge = 0;
@@ -70,18 +72,24 @@
       }
 //  ----
       if (upg === "me") {
-        if (money < 150000) { alert("ik its expensive, so get a JOB to pay for it"); return; };
+        if (money < 95000) { alert("ik its expensive, so get a JOB to pay for it"); return; };
         max_energy += 5;
       }
 
       if (upg === "mh") {
-        if (money < 145000) { alert("its still expensive but get a JOB"); return; }
+        if (money < 85000) { alert("its still expensive but get a JOB"); return; }
         max_happiness += 5;
       }
 
       if (upg === "mhun") {
-        if (money < 165000) { alert("this is too expensive... maybe uh itll be rebalanced soon"); return; }
+        if (money < 100000) { alert("this is still too expensive"); return; }
         min_hunger += 5;
+      }
+
+//    -                 -
+      if (upg === "pc") {
+if (money < 50000 && bought_pc) { alert("you cant afford this ultra supreme ultimate gaming pc"); return; }
+        bought_pc = true;
       }
 
       if (energy_value <= 0) energy_value = 0;
