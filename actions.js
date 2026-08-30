@@ -35,6 +35,8 @@
         }
         if (action === "Request a Raise") {
 
+          alert("You requested for a raise!");
+
           if (Math.random() < 0.03) {
 
           income += Math.floor(Math.random() * (150 + 10 + 1) + 10);
@@ -166,19 +168,31 @@
     }
 
     function spendTime() {
-      alert("You spent time doing something (list of 'something' will soon be added)!");
+
+      const something = [
+        "touching grass",
+        "playing soccer",
+        "drinking water",
+        "going to bed",
+        "doomscrolling",
+        "eating",
+        "driving",
+        "levitating..?"
+      ]
+
+      alert("You spent time doing something...");
 
       energy -= 15;
       happiness += 35;
 
       if (Math.random() < 0.5) {
-        alert("You got lucky because 'something' was helpful!");
+        alert(`You got lucky because ${something} was helpful!`);
 
         hunger -= 25;
         money += 50;
 
       }  else {
-        alert("'Something' seems like a waste of time...");
+        alert(`It looks like that ${something} seem like a waste of time...`);
 
         hunger += 25;
         money -= 50;
