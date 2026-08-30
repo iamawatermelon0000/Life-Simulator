@@ -4,6 +4,7 @@
 - new repo for Life Simulator<br>
 - the repo one has imploded due to various bugs<br>
 - dont try to cheat...<br>
+- tell me if there are any bugs!<br>
 
 ## Main
 ### About
@@ -11,8 +12,8 @@
 - Made by: @iamawatermelon0000<br>
 - Project Name: Life Simulator<br>
 - Made on: 07/23/2026<br>
-- Last updated on: 08/25/2026 6:47PM GMT+7 (Southeast Asia)<br>
-*<sub>or August 25th, 2026 for my fellow Asians</sub>*
+- Last updated on: 08/30/2026 6:49PM GMT+7 (Southeast Asia)<br>
+*<sub>or August 30th, 2026 for my fellow Asians</sub>*
 - Total files: approx. 13 files (including README)<br>
 
 ### Updates
@@ -35,6 +36,7 @@
 **1.5.3 - Rebirth Shop!**<br><br>
 **1.6.0 - Endgame Rebirth Item and bug fixes**<br><br>
 **1.6.5 - ECONOMY REWORKS AND MORE!**<br><br>
+**1.6.6 - Added a list and QoL (more in the update logs)**<br><br>
 
 
 ### Notes
