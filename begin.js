@@ -18,6 +18,8 @@
       save();
       } catch (err) {
         throw new Error(err, err.message);
+      } finally {
+        console.log("%cCode ran, no errors were found.", "font-size:35px;color:red;border:2px solid red;font-weight:bold; font-style:italic;");
       }
 
       btn.remove();
