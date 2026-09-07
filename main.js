@@ -6,11 +6,13 @@
 
     let debugging = localStorage.getItem("debugging.KEEP") == "true";
     let cheated = localStorage.getItem("cheated.KEEP") == "true";
+    let confirmed = false;
     //                                                                                                    //
 
-    /* SELECTS, BUTTONS */
+    /* QUERY-ALL */
     const selects = document.querySelectorAll("select");
     const buttons = document.querySelectorAll("button");
+    const ps = document.querySelectorAll(".crucial");
 
     /* STATS */
     let age = Number(localStorage.getItem("age") || 0);
@@ -190,13 +192,13 @@
           location.replace("second_window.html");
         }
 
-        if (age >= rebirthable_age) {
-          if (iAll) clearInterval(iAll);
+        if (age >= rebirthable_age && confirmed === false) {
           const conf_rebirth = confirm(`You've reached age 100, rebirth? Rebirthing will increase your current money multiplier by 0.5, current multiplier: ${multiplier}`);
 
           if (conf_rebirth) {
             rebirth_btn.disabled = false;
           } else {
+            confirmed = true;
             alert("You can rebirth anytime by clicking the rebirth button at the end!");
             rebirth_btn.disabled = false;
           }
@@ -223,6 +225,9 @@
 
       }, 1900);
 
+      let _check_count = 0;
+  const _checking=setInterval(()=>{_check_count++;console.warn(`Hunger:${hunger}, Happiness:${happiness}, Energy:${energy}`);if(!iAll)console.warn("Interval not running!");if(iAll)console.warn(iAll);console.warn(confirmed);if(_check_count>=10){clearInterval(_checking);console.warn("%cstopped","font-size:25px;color:red;font-weight:bold")}},1000);
+
       save();
     };
 
@@ -234,6 +239,9 @@
           buttons.forEach(b => {
             b.disabled = false;
           });
+          ps.forEach(p => {
+            p.style.color = "black";
+          })
 
           document.body.style.opacity = 1;
           document.body.style.background = "#E8E6E6";
@@ -241,20 +249,35 @@
 
         if (energy <= 0 || happiness <= 0) {
           document.body.style.opacity = "0.25";
+          ps.forEach(p => {
+            p.style.color = "#FF0000";
+          })
 
         } else if (hunger >= 50 || happiness < 25) {
           document.body.style.opacity = "0.5";
+          ps.forEach(p => {
+            p.style.color = "#FF0000";
+          })
 
         } else {
           document.body.style.opacity = "1";
+          ps.forEach(p => {
+            p.style.color = "black";
+          })
         }
 
         if (happiness <= 50 || hunger >= 75 || energy <= 25) {
           document.body.style.background = "gray";
+          ps.forEach(p => {
+            p.style.color = "black";
+          })
         }
 
         if (happiness <= 0 || hunger >= 100 || energy <= 0) {
           document.body.style.background = "black";
+          ps.forEach(p => {
+            p.style.color = "#FF0000";
+          })
         }
     }
 
