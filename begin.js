@@ -10,11 +10,15 @@
       let container1 = document.getElementById("container1");
       let starting = document.getElementById("startingScreen");
 
+      try {
       printInfos();
       if (pname.length <= 0) rerollName();
       startMain();
       updateTime();
       save();
+      } catch (err) {
+        throw new Error(err, err.message);
+      }
 
       btn.remove();
 
