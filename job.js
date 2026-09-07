@@ -106,3 +106,33 @@
         prJobStat.textContent = "";
       }, 1500)
     };
+
+    /** HUSTLES */
+    /** HUSTLES VARIABLES */
+    let result;
+    const hustles = [
+        "dumbster diving",
+        "thrifting",
+        "freelancing for a friend",
+        "doing homework",
+        "learning something"
+      ];
+
+    function doHustle() {
+      const hust_inc = Math.floor(Math.random() * (9999 - 1 + 1) + 1);
+
+      if (Math.random() < .5) {
+        const convert = -hust_inc;
+        if (convert === -hust_inc) result = "lost";
+        alert(`Hustle: ${hustles[Math.floor(Math.random() * hustles.length)]}, you ${result} ${convert}`);
+        money += (hust_inc * multiplier);
+
+      } else {
+        result = "gained";
+        alert(`Hustle: ${hustles[Math.floor(Math.random() * hustles.length)]}, you ${result} ${hust_inc}`);
+        money += (hust_inc * multiplier);
+      }
+
+      save();
+      printInfos();
+    }
