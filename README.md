@@ -11,9 +11,9 @@
 ---
 - Made by: @iamawatermelon0000<br>
 - Project Name: Life Simulator<br>
-- Made on: 07/23/2026<br>
-- Last updated on: 08/30/2026 6:49PM GMT+7 (Southeast Asia)<br>
-*<sub>or August 30th, 2026 for my fellow Asians</sub>*
+- Made on: 07/09/2026 (July 9th of 2026)<br>
+- Last updated on: 09/07/2026 7:14PM GMT+7 (Southeast Asia)<br>
+*<sub>or September 7th, 2026 for my fellow Asians</sub>*
 - Total files: approx. 13 files (including README)<br>
 
 ### Updates
@@ -37,6 +37,15 @@
 **1.6.0 - Endgame Rebirth Item and bug fixes**<br><br>
 **1.6.5 - ECONOMY REWORKS AND MORE!**<br><br>
 **1.6.6 - Added a list and QoL (more in the update logs)**<br><br>
+**1.7.0 - *I'm back!* QoL, Hustles and bug fixes**<br><br>
+**(Github Update): - Added Big Updates section thingy**<br><br>
+
+#### Big Updates
+**Big Updates Include:**
+```
+1.0.0, 1.3.0, 1.4.8, 1.6.5
+```
+<sub>These are according to me</sub>
 
 
 ### Notes
