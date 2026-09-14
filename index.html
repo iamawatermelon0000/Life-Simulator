@@ -14,6 +14,7 @@
   <script src="save_and_render.js" defer></script>
   <script src="anti_cheat.js" defer></script>
   <script src="rebirth.js" defer></script>
+  <script src="intelligence.js" defer></script>
 
   <link rel="stylesheet" href="style.css">
 </head>
@@ -45,6 +46,19 @@
       <p id="money">Money:</p>
     </div>
 
+    <div id="intelligenceContainer">Intelligence:
+      <p id="intelligencePrinter" title="Currently has a HARD-CAP of 100.">Your Intelligence:</p>
+
+      <select id="intelActions">Intelligence-Related Actions:
+        <option>None</option>
+        <option value="study" title="(i) 0+ Intelligence required">Study</option>
+        <option value="read-a-book" title="(i) 20+ Intelligence required">Read a Book</option>
+        <option value="do-excercises" title="(i) 50+ Intelligence required">Do excercises</option>
+        <option value="learn-programming" title="(i) 75+ Intelligence required">Learn a Programming Language</option>
+      </select>
+      <button type="button" onclick="doIntelActions()">Do action</button>
+    </div>
+
     <div id="rent">Rent:
       <p id="currentRent">Current Rent:</p>
       <p id="unpaidRent">Total Unpaid Rent:</p>
@@ -70,7 +84,7 @@
       <progress id="hpProg" max="100"></progress>
     </div>
 
-    <div id="lottery">
+    <div id="lottery">Lottery:
       <p id="numOfTickets">Your number of tickets:</p>
       <p id="ticketNumber">Your ticket number: PLACEHOLDER</p>
       <p id="winningNumber">Winning ticket number: PLACEHOLDER</p>
