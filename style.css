@@ -10,7 +10,8 @@
     #rent,
     #lottery,
     #rebirthShopDIV,
-    #rebirth {
+    #rebirth,
+    #intelligenceContainer {
       display: flex;
       justify-content: center;
       align-items: center;
@@ -88,3 +89,4 @@
 
       background: #FFEB00;
     }
+
