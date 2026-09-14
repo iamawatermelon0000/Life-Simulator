@@ -12,9 +12,9 @@
 - Made by: @iamawatermelon0000<br>
 - Project Name: Life Simulator<br>
 - Made on: 07/09/2026 (July 9th of 2026)<br>
-- Last updated on: 09/07/2026 7:14PM GMT+7 (Southeast Asia)<br>
-*<sub>or September 7th, 2026 for my fellow Asians</sub>*
-- Total files: approx. 13 files (including README)<br>
+- Last updated on: 09/14/2026 8:00PM GMT+7 (Southeast Asia)<br>
+*<sub>or September 14th, 2026 for my fellow Asians</sub>*
+- Total files: approx. 14 files (including README)<br>
 
 ### Updates
 ---
@@ -39,11 +39,12 @@
 **1.6.6 - Added a list and QoL (more in the update logs)**<br><br>
 **1.7.0 - *I'm back!* QoL, Hustles and bug fixes**<br><br>
 **(Github Update): - Added Big Updates section thingy**<br><br>
+**1.8.0 - Intelligence! (it's finally here), QoL and Bug fixes**<br><br>
 
 #### Big Updates
 **Big Updates Include:**
 ```
-1.0.0, 1.3.0, 1.4.8, 1.6.5
+1.0.0, 1.3.0, 1.4.8, 1.6.5, 1.8.0 <- most files edited
 ```
 <sub>These are according to me</sub>
 
