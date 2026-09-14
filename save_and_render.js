@@ -49,6 +49,10 @@
       localStorage.setItem("purchased__", purchased__);
       localStorage.setItem("purchased___", purchased___);
       localStorage.setItem("__purchased__", __purchased__);
+
+      localStorage.setItem("intelligencePoint", intel_point);
+      localStorage.setItem("extraIntelligencePoint", extra_intel);
+      localStorage.setItem("plang", pl);
     };
     /* PRINT INFOS */
     function printInfos() {
@@ -82,5 +86,7 @@
       prTimeRebirthed.textContent = `You've rebirthed ${time_rebirth} in total.`;
 
       prTime.innerHTML = `You've been here for:<br>${hr_time.toString().padStart(2, "0")}:${min_time.toString().padStart(2, "0")}:${sec_time.toString().padStart(2, "0")}`;
+
+      prIntelligence.textContent = `Your intelligence: ${intel_point} (${current_title})`;
     }
 
