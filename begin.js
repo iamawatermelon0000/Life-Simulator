@@ -16,6 +16,8 @@
       startMain();
       updateTime();
       save();
+      intelligenceIntervalChecking();
+      assignTitle();
       } catch (err) {
         throw new Error(err, err.message);
       } finally {
