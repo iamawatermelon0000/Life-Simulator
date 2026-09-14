@@ -186,13 +186,13 @@
       happiness += 35;
 
       if (Math.random() < 0.5) {
-        alert(`You got lucky because ${something} was helpful!`);
+        alert(`You got lucky because ${something[Math.floor(Math.random() * something.length)]} was helpful!`);
 
         hunger -= 25;
         money += 50;
 
       }  else {
-        alert(`It looks like that ${something} seem like a waste of time...`);
+        alert(`It looks like that ${something[Math.floor(Math.random() * something.length)]} seem like a waste of time...`);
 
         hunger += 25;
         money -= 50;
