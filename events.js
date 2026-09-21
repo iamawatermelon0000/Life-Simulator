@@ -152,22 +152,22 @@
 
       } else if (working === "Employee of the month" && Math.random() < 0.015) {
         prJobStat.textContent = "You were the employee of the month, so the boss decided to raise your salary!";
-        salary += 50;
+        salary_time += 50;
 
       } else if (working === "Employee of the year" && happiness > 50 && hunger < 50 && energy > 50 && age > 1 && Math.random() < 0.013) {
         prJobStat.textContent = "You were the most elite employee during that year, so you got a huge raise!";
-        salary += 250;
+        salary_time += 250;
 
       } else if (working === "Senior Employee" && Math.random() < 0.005) {
         prJobStat.textContent = "You became a senior employee!";
 
-        while (salary < Math.floor(Math.random() * (2000 - 1500 + 1) + 1500)) {
-          salary += 1;
+        while (salary_time < Math.floor(Math.random() * (2000 - 1500 + 1) + 1500)) {
+          salary_time += 1;
         }
 
       } else if (working === "Promoted" && Math.random() < 0.005) {
         prJobStat.textContent = "You were promoted!";
-        (salary += (Math.floor(Math.random() * (999 - 199 + 1) + 199)));
+        (salary_time += (Math.floor(Math.random() * (999 - 199 + 1) + 199)));
 
       } else {
         prJobStat.textContent = "You thought that something would happen today at work, but nothing ended up happening.";
