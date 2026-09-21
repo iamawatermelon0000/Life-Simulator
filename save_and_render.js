@@ -11,7 +11,7 @@
 
       localStorage.setItem("job", curr_job);
       localStorage.setItem("income", income);
-      localStorage.setItem("salary", salary);
+      localStorage.setItem("salary", salary_time);
       localStorage.setItem("working_events_log", JSON.stringify(working_events_log));
       localStorage.setItem("eventPity", event_pity);
 
@@ -61,7 +61,7 @@
       prMoney.textContent = `Money: $${money}`;
 
       prJob.textContent = `Job: ${curr_job}`;
-      prInc.textContent = `Income: $${income}/ ${salary}s`;
+      prInc.textContent = `Income: $${income}/ ${salary_time}s`;
 
       prEnergy.textContent = `Energy: ${energy}`;
       prHunger.textContent = `Hunger: ${hunger}`;
