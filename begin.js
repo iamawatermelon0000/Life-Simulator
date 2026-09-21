@@ -7,10 +7,9 @@
     function begin() {
 
       if (!started) {
-      let container1 = document.getElementById("container1");
-      let starting = document.getElementById("startingScreen");
 
       try {
+        scrollTitle();
       printInfos();
       if (pname.length <= 0) rerollName();
       startMain();
