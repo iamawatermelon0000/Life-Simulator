@@ -5,6 +5,7 @@
 - the repo one has imploded due to various bugs<br>
 - dont try to cheat...<br>
 - tell me if there are any bugs!<br>
+- you can now visit [text](https://iamawatermelon0000.github.io/Life-Simulator/)!
 
 ## Main
 ### About
