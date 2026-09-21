@@ -4,6 +4,7 @@ let extra_intel = Number(localStorage.getItem("extraIntelligencePoint") || 0);
 
 let purging = false;
 let pl = localStorage.getItem("plang") || "None";
+let cooldown = false;
 
 const prIntelligence = document.getElementById("intelligencePrinter");
 const intel_titles = [
@@ -64,11 +65,15 @@ function intelligenceIntervalChecking() {
 }
 
 function doIntelActions() {
+
+  if (cooldown) return; alert("slow down.");
+  cooldown = true;
+
   const action = document.getElementById("intelActions").value;
 
   if (action === "study") {
 
-    alert("You studied and maybe, probably, perchance, perhaps, might have, learned something useful.");
+    alert("You studied and maybe, probably, perchance, perhaps, might have learned something useful.");
     intel_point += Math.floor(Math.random() * 5) + 1;
 
   } else if (action === "read-a-book") {
@@ -106,4 +111,11 @@ function doIntelActions() {
     alert(`You learnt some ${Math.random < .5 ? "basic" : "complex"} concepts of ${pl}!`);
     intel_point += Math.floor(Math.random() * (25 - 15 + 1) + 25);
   }
+
+  setTimeout(() => {
+    cooldown = false;
+  }, 3000)
+
+  save();
+  printInfos();
 }
