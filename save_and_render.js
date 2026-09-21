@@ -1,235 +1,92 @@
-/* UPGRADES */
+    /* SAVING */
+    function save() {
+      localStorage.setItem("age", age);
+      localStorage.setItem("pname", JSON.stringify(pname));
+      localStorage.setItem("money", money);
 
-/* VARIABLES */
-    let age_value = Number(localStorage.getItem("ageVal") || 120);
-    let hunger_value = Number(localStorage.getItem("hungerVal") || 15);
-    let happiness_value = Number(localStorage.getItem("happinessVal") || 10);
-    let energy_value = Number(localStorage.getItem("energyVal") || 5);
+      localStorage.setItem("multiplier.KEEP", multiplier);
+      localStorage.setItem("rebirthToken.KEEP", rebirth_token);
+      localStorage.setItem("rebirthableAge.KEEP", rebirthable_age);
+      localStorage.setItem("timeRebirth.KEEP", time_rebirth);
 
-    let max_energy = Number(localStorage.getItem("maxEnergy") || 100);
-    let min_hunger = Number(localStorage.getItem("minHunger") || 0);
-    let max_happiness = Number(localStorage.getItem("maxHappiness") || 100);
+      localStorage.setItem("job", curr_job);
+      localStorage.setItem("income", income);
+      localStorage.setItem("salary", salary_time);
+      localStorage.setItem("working_events_log", JSON.stringify(working_events_log));
+      localStorage.setItem("eventPity", event_pity);
 
-    let prUpgrades = document.getElementById("totalUpgrades");
+      localStorage.setItem("energy", energy);
+      localStorage.setItem("hunger", hunger);
+      localStorage.setItem("happiness", happiness);
 
-    let bought_pc = false;
+      localStorage.setItem("maxEnergy", max_energy);
+      localStorage.setItem("maxHappiness", max_happiness);
+      localStorage.setItem("minHunger", min_hunger);
 
-/* FUNCTION */
-    function buyUpgrades() {
+      localStorage.setItem("bought", JSON.stringify(bought_logging_list));
+      localStorage.setItem("jobPrice", job_price);
+      localStorage.setItem("agePrice", age_price);
+      localStorage.setItem("agePriceValue", age_price_value);
 
-      let upg = document.getElementById("upgrades").value;
+      localStorage.setItem("ageVal", age_value);
+      localStorage.setItem("hungerVal", hunger_value);
+      localStorage.setItem("happinessVal", happiness_value);
+      localStorage.setItem("energyVal", energy_value);
 
-      if (upg === "en") {
+      localStorage.setItem("unpaidRent", unpaid_rent);
+      localStorage.setItem("rentTime", rentTime);
 
-        if (money < 50000) { alert("brokie"); return; }
+      localStorage.setItem("ticketNum", ticket_num);
 
-        energy_value += 5;
-        iEnergy = 0;
+      localStorage.setItem("debugging.KEEP", debugging);
+      localStorage.setItem("cheated.KEEP", cheated);
 
-        money -= 75000;
+      localStorage.setItem("sec_time", sec_time);
+      localStorage.setItem("min_time", min_time);
+      localStorage.setItem("hr_time", hr_time);
 
-        if (iAll) clearInterval(iAll);
-        startMain();
-      }
+      localStorage.setItem("purchased_", purchased_);
+      localStorage.setItem("purchased__", purchased__);
+      localStorage.setItem("purchased___", purchased___);
+      localStorage.setItem("__purchased__", __purchased__);
 
-      if (upg === "hp") {
+      localStorage.setItem("intelligencePoint", intel_point);
+      localStorage.setItem("extraIntelligencePoint", extra_intel);
+      localStorage.setItem("plang", pl);
+    };
+    /* PRINT INFOS */
+    function printInfos() {
+      prName.textContent = `Name: ${pname}`;
+      prAge.textContent = `Age: ${age}`;
+      prMoney.textContent = `Money: $${money}`;
 
-        if (money < 45000) { alert("ur too broke"); return; }
+      prJob.textContent = `Job: ${curr_job}`;
+      prInc.textContent = `Income: $${income}/ ${salary_time}s`;
 
-        happiness_value += 5;
-        iHappy = 0;
+      prEnergy.textContent = `Energy: ${energy}`;
+      prHunger.textContent = `Hunger: ${hunger}`;
+      prHappy.textContent = `Happiness: ${happiness}`;
 
-        money -= 50000;
+      pgEn.value = energy;
+      pgHg.value = hunger;
+      pgHp.value = happiness;
 
-        if (iAll) clearInterval(iAll);
-        startMain();
-      }
+      prUpgrades.innerHTML = `After Upgrades:<br>[+1 Age/ ${age_value}s], [+ 1 Hunger/ ${hunger_value}s], [- 1 Happiness/ ${happiness_value}s], [- 1 Energy/ ${energy_value}s]<br>[Max Energy: ${max_energy}], [Max Happiness: ${max_happiness}], [Min hunger: -${min_hunger}]`;
 
-      if (upg === "age") {
+      prRent.textContent = `Current rent: ${rent}`;
+      prUnpaid.textContent = `Total Unpaid Rent: ${unpaid_rent}`
 
-        if (money < 75000) { alert("get a J*B to pay for this"); return; }
+      prAllItem.textContent = `Every items that you've bought: ${bought_logging_list.join(', ') || "None"}`;
 
-        age_value -= 20;
-        iAge = 0;
+      prTicket_Num.textContent = `Your number of tickets: ${ticket_num || 0}`;
 
-        money -= 100000;
+      prRebirthable.textContent = `You can rebirth at age: ${rebirthable_age}`;
+      prRebirthToken.textContent = `Your total rebirth token(s): ${rebirth_token}`;
+      prMultiplier.textContent = `Your current multiplier: ${multiplier || 1}`;
+      prTimeRebirthed.textContent = `You've rebirthed ${time_rebirth} in total.`;
 
-        if (iAll) clearInterval(iAll);
-        startMain();
-      }
+      prTime.innerHTML = `You've been here for:<br>${hr_time.toString().padStart(2, "0")}:${min_time.toString().padStart(2, "0")}:${sec_time.toString().padStart(2, "0")}`;
 
-      if (upg === "hg") {
-
-        if (money < 40000) { alert("when ur getting ur first job, its FREE"); return; }
-
-        hunger_value += 5;
-        iHunger = 0;
-
-        money -= 40000;
-
-        if (iAll) clearInterval(iAll);
-        startMain();
-      }
-//  ----
-      if (upg === "me") {
-        if (money < 95000) { alert("ik its expensive, so get a JOB to pay for it"); return; };
-        max_energy += 5;
-      }
-
-      if (upg === "mh") {
-        if (money < 85000) { alert("its still expensive but get a JOB"); return; }
-        max_happiness += 5;
-      }
-
-      if (upg === "mhun") {
-        if (money < 100000) { alert("this is still too expensive"); return; }
-        min_hunger += 5;
-      }
-
-//    -                 -
-      if (upg === "pc") {
-if (money < 50000 && bought_pc) { alert("you cant afford this ultra supreme ultimate gaming pc"); return; }
-        bought_pc = true;
-      }
-
-      if (energy_value <= 0) energy_value = 0;
-      if (happiness_value <= 0) happiness_value = 0;
-      if (age_value <= 60) age_value = 60;
-      if (hunger_value <= 0) hunger_value = 0;
-
-      if (max_energy >= 150) max_energy = 150;
-      if (max_happiness >= 150) max_happiness = 150;
-      if (min_hunger >= 50) min_hunger = 50;
-
-      save();
-      printInfos();
+      prIntelligence.textContent = `Your intelligence: ${intel_point} (${current_title})`;
     }
 
-/* SHOPPING */
-
-/* SHOPPING VARIABLES */
-    const item_list = document.getElementById("item");
-    const prAllItem = document.getElementById("allBoughtItems");
-
-    let bought_logging_list = JSON.parse(localStorage.getItem("bought") || "[]");
-    let bought_item;
-
-    let job_price = Number(localStorage.getItem("jobPrice") || 1000);
-    let change_active;
-
-    let age_price = Number(localStorage.getItem("agePrice") || 2500);
-    let age_price_value = Number(localStorage.getItem("agePriceValue") || 1.25);
-
-/* SHOPPING FUNCTION */
-    function buyItem() {
-
-      let item = item_list.value;
-      if (item === "None" || !item) return;
-
-      if (item === "gb") {
-
-        if (money < 10000) {
-          alert(`This item requires atleast $10.000, your current balance is: ${money}.`);
-          return;
-        }
-
-        if (Math.random() < 0.5) {
-          hunger -= 100;
-        } else {
-          hunger += 25; // for pity
-        }
-
-        money -= 10000;
-        bought_item = "Ghost Burger";
-
-      } else if (item === "mc") {
-
-        if (money < 6900) {
-          alert(`This item requires atleast $6.900, your current balance is: ${money}.`);
-          return;
-        }
-
-        let selected_item = allStats[Math.floor(Math.random() * allStats.length)];
-
-        if (selected_item === "energy") energy += 25;
-        if (selected_item === "hunger") hunger -= 25;
-        if (selected_item === "happiness") happiness += 25;
-
-        money -= 6900;
-        bought_item = "Mysterious Cola";
-
-      } else if (item === "gl") {
-
-        if (money < 15000) {
-          alert(`This item requires atleast $15.000, your current balance is: ${money}.`);
-          return;
-        }
-
-        money -= 15000;
-        happiness += 50;
-        bought_item = "Gaming Laptop";
-
-      } else if (item === "cj") {
-
-        if (money < job_price) {
-          alert(`This item requires atleast $${job_price}, your current balance is: ${money}.`);
-          return;
-        }
-
-        money -= job_price;
-        job_price += 1000;
-
-        if (job_price >= 500000) {
-          job_price = job_price * 1.2;
-        }
-
-        change_active = true;
-        job();
-
-        setTimeout(() => {
-          change_active = false;
-        }, 32);
-
-        bought_item = "Change Job";
-
-      } else if (item === "c") {
-
-        age_price = ((2500 * (age * 75)) / 100);
-        if (age === 0) age_price = (((2500 * ((age_price_value += 0.15) * 75)) / 100) * 1.2).toFixed(0);
-        if (money < age_price) {
-          alert(`This item requires atleast $${age_price}, while your current balance is: ${money}.`);
-          return;
-        }
-
-        age += 1;
-        money -= age_price;
-        bought_item = "Clock";
-
-      } else if (item === "ts") { // holy typescript reference
-
-        const therapy_session_price = Math.floor(Math.random() * (250000 - 100000 + 1) + 100000);
-        if (money < therapy_session_price) {
-      alert(`The therapist wants ${therapy_session_price} for it, while ur broke and only have ${money}`);
-          return;
-        }
-
-        money -= therapy_session_price;
-        happiness += 100;
-        hunger += 10;
-
-        happiness_value += 10;
-        startMain();
-
-        const hpv_timeout = setTimeout(() => {
-          happiness_value -= 10;
-        }, 20000);
-
-        bought_item = "Therapy Session";
-      }
-
-      bought_logging_list.push(bought_item);
-      (document.getElementById("boughtItem").textContent = `You bought: ${bought_item}`);
-
-      save();
-      printInfos();
-    }
