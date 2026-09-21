@@ -281,6 +281,7 @@
         }
     }
 
+    /** OTHERS. */
     function updateTime() {
 
       if (iTime) clearInterval(iTime);
@@ -303,6 +304,22 @@
         printInfos();
 
       }, 1000);
+    }
+
+    function scrollTitle() {
+
+      let i = 0;
+      const titles = ["l", "li", "lif", "life", "life."];
+
+      const int = setInterval(() => {
+        document.title = "";
+        document.title += titles[i++];
+
+        if (i >= titles.length) {
+          i = 0;
+          document.title = "life.";
+        }
+      }, 1500)
     }
 
     function devOnly(){debugging=true,save(),printInfos()}
