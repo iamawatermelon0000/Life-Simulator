@@ -23,7 +23,8 @@
     let index;
     let curr_job = localStorage.getItem("job") || "None";
     let income = Number(localStorage.getItem("income") || 0); // per 30-60 seconds
-    let salary = Number(localStorage.getItem("salary") || 1);
+    let salary_time = Number(localStorage.getItem("salaray") || 1);
+    let income_bonus;
 
     let prJob = document.getElementById("job");
     let prInc = document.getElementById("income");
@@ -90,8 +91,9 @@
       all_jobs.splice(index, 1);
       if (all_jobs.length === 0) all_jobs = [...jobs];
 
-      income = Math.floor(Math.random() * (2000 - 50 + 1) + 50);
-      salary = Math.floor(Math.random() * (60 - 30 + 1) + 30);
+      income_bonus = intel_point > 100 ? income_bonus = Math.floor(Math.random() * (500 - 100 + 1) + 100) : intel_point > 50 ? income_bonus = Math.floor(Math.random() * (250 - 50 + 1) + 50) : intel_point > 25 ? income_bonus = (Math.floor(Math.random() * (50 + 10 + 1) + 10)) : 0;
+      income = (Math.floor(Math.random() * (2000 - 50 + 1) + 50) + income_bonus);
+      salary_time = Math.floor(Math.random() * (60 - 30 + 1) + 30);
 
       if (iSal) clearInterval(iSal);
       iSal = setInterval(() => {
@@ -100,7 +102,7 @@
 
         save();
         printInfos();
-      }, salary * 1000);
+      }, salary_time * 1000);
 
       setTimeout(() => {
         prJobStat.textContent = "";
