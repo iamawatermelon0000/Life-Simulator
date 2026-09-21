@@ -1,66 +1,92 @@
-  <!DOCTYPE html>
-  <html>
+    /* SAVING */
+    function save() {
+      localStorage.setItem("age", age);
+      localStorage.setItem("pname", JSON.stringify(pname));
+      localStorage.setItem("money", money);
 
-  <body>
+      localStorage.setItem("multiplier.KEEP", multiplier);
+      localStorage.setItem("rebirthToken.KEEP", rebirth_token);
+      localStorage.setItem("rebirthableAge.KEEP", rebirthable_age);
+      localStorage.setItem("timeRebirth.KEEP", time_rebirth);
 
-    <div id="container">
+      localStorage.setItem("job", curr_job);
+      localStorage.setItem("income", income);
+      localStorage.setItem("salary", salary_time);
+      localStorage.setItem("working_events_log", JSON.stringify(working_events_log));
+      localStorage.setItem("eventPity", event_pity);
 
-      <h2 readonly>
-        UPDATE LOGS:<br><br><br>
-        . 1.0.0 - Release<br><br>
-        . 1.0.2 to 1.1.0 - Bug fixes, optimization, updated files<br><br>
-        . 1.1.2 - Multiplier, Rebirth incoming!<br><br>
-        . 1.1.3 - Playing the lottery now actually decreases your number of tickets<br><br>
-        . 1.1.5 - Bought items now shows the item name properly, now makes sure that you need to have a JOB and older than 16 to pay rent<br><br>
-        . 1.2.0 - More actions and decimal clamping<br><br>
-        . 1.3.0 - REBIRTHS!<br><br>
-        . 1.4.0 - In-built update logs and roadmap viewer!<br><br>
-        . 1.4.0 - Added an in-built update logs and roadmap viewer (alongside with this README)!!!<br><br>
-        . 1.4.2 - Added 1 item: "Therapy Session", costs 100k to 250k<br><br>
-        . 1.4.6 - Various bug fixes<br><br>
-        . 1.4.8 - Edited update_logs and roadmap (both are .html)<br><br>
-        . 1.5.0 - Added an in-game clock, QoL and various bug fixes<br><br>
-        . 1.5.3 - Added a rebirth shop, items in there can be purchased using Rebirth Tokens. Saves until the next rebirth<br>
-        <sub>larpest update ever</sub><br><br>
-        . 1.6.0 - End-game rebirth items and various bug fixes<br><br>
-        . 1.6.5 - Economy rebalancings and 01 new item<br>
-        <sub>im back</sub><br><br>
-        . 1.6.6 - Minor Update: added a list of actions for the spendTime() function and QoL<br><br>
-        . 1.7.0 - Hustles, QoL (icluding making stats texts red when the page is dark!) and various bug fixes!<br><br>
-        . 1.8.0 - INTELLIGENCE! QoL, Bug fixes, improvements and more!<br>
-        <sub>might be the biggest update YET</sub><br><br>
-      </h2>
+      localStorage.setItem("energy", energy);
+      localStorage.setItem("hunger", hunger);
+      localStorage.setItem("happiness", happiness);
 
-      <button type="button" onclick="window.location.href = 'index.html'">Go back</button>
-    </div>
+      localStorage.setItem("maxEnergy", max_energy);
+      localStorage.setItem("maxHappiness", max_happiness);
+      localStorage.setItem("minHunger", min_hunger);
 
-    <style>
-      body,
-      div {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 75px;
-        flex-direction: column;
-      }
+      localStorage.setItem("bought", JSON.stringify(bought_logging_list));
+      localStorage.setItem("jobPrice", job_price);
+      localStorage.setItem("agePrice", age_price);
+      localStorage.setItem("agePriceValue", age_price_value);
 
-      button {
-        resize: none;
+      localStorage.setItem("ageVal", age_value);
+      localStorage.setItem("hungerVal", hunger_value);
+      localStorage.setItem("happinessVal", happiness_value);
+      localStorage.setItem("energyVal", energy_value);
 
-        width: 375px;
-        height: 175px;
+      localStorage.setItem("unpaidRent", unpaid_rent);
+      localStorage.setItem("rentTime", rentTime);
 
-        padding: 50px;
-        font-size: 30px;
-        font-family: 'Courier New', Courier, monospace;
-        font-weight: bold;
-      }
+      localStorage.setItem("ticketNum", ticket_num);
 
-      button {
-        width: 250px;
-        height: 125px;
-      }
-    </style>
-  </body>
+      localStorage.setItem("debugging.KEEP", debugging);
+      localStorage.setItem("cheated.KEEP", cheated);
 
-  </html>
+      localStorage.setItem("sec_time", sec_time);
+      localStorage.setItem("min_time", min_time);
+      localStorage.setItem("hr_time", hr_time);
+
+      localStorage.setItem("purchased_", purchased_);
+      localStorage.setItem("purchased__", purchased__);
+      localStorage.setItem("purchased___", purchased___);
+      localStorage.setItem("__purchased__", __purchased__);
+
+      localStorage.setItem("intelligencePoint", intel_point);
+      localStorage.setItem("extraIntelligencePoint", extra_intel);
+      localStorage.setItem("plang", pl);
+    };
+    /* PRINT INFOS */
+    function printInfos() {
+      prName.textContent = `Name: ${pname}`;
+      prAge.textContent = `Age: ${age}`;
+      prMoney.textContent = `Money: $${money}`;
+
+      prJob.textContent = `Job: ${curr_job}`;
+      prInc.textContent = `Income: $${income}/ ${salary_time}s`;
+
+      prEnergy.textContent = `Energy: ${energy}`;
+      prHunger.textContent = `Hunger: ${hunger}`;
+      prHappy.textContent = `Happiness: ${happiness}`;
+
+      pgEn.value = energy;
+      pgHg.value = hunger;
+      pgHp.value = happiness;
+
+      prUpgrades.innerHTML = `After Upgrades:<br>[+1 Age/ ${age_value}s], [+ 1 Hunger/ ${hunger_value}s], [- 1 Happiness/ ${happiness_value}s], [- 1 Energy/ ${energy_value}s]<br>[Max Energy: ${max_energy}], [Max Happiness: ${max_happiness}], [Min hunger: -${min_hunger}]`;
+
+      prRent.textContent = `Current rent: ${rent}`;
+      prUnpaid.textContent = `Total Unpaid Rent: ${unpaid_rent}`
+
+      prAllItem.textContent = `Every items that you've bought: ${bought_logging_list.join(', ') || "None"}`;
+
+      prTicket_Num.textContent = `Your number of tickets: ${ticket_num || 0}`;
+
+      prRebirthable.textContent = `You can rebirth at age: ${rebirthable_age}`;
+      prRebirthToken.textContent = `Your total rebirth token(s): ${rebirth_token}`;
+      prMultiplier.textContent = `Your current multiplier: ${multiplier || 1}`;
+      prTimeRebirthed.textContent = `You've rebirthed ${time_rebirth} in total.`;
+
+      prTime.innerHTML = `You've been here for:<br>${hr_time.toString().padStart(2, "0")}:${min_time.toString().padStart(2, "0")}:${sec_time.toString().padStart(2, "0")}`;
+
+      prIntelligence.textContent = `Your intelligence: ${intel_point} (${current_title})`;
+    }
+
