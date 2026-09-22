@@ -24,8 +24,8 @@ function liftBan() {
 
   if (codes.includes(pr)) {
     cheated = false;
+    localStorage.setItem("cheated.KEEP", cheated);
   } else return;
 
-  localStorage.setItem("cheated", cheated);
-  location.replace("index.html");
+  setTimeout(() => location.replace("index.html"), 3000);
 }
