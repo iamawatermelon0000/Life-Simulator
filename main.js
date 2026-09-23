@@ -193,6 +193,7 @@
         if (cheated) {
           location.replace("second_window.html");
         }
+        console.log("executing til here")
         if (firstVisit) {
           localStorage.setItem("firstVisit.KEEP", "false")
           location.replace("welcome.html");
