@@ -43,6 +43,7 @@
 **1.8.0 - Intelligence! (it's finally here), QoL and Bug fixes**<br><br>
 **1.9.0 - Title scrolling, job income bonus if you're smart and __MAJOR__ bug fixes!**<br><br>
 **1.9.1 - Anticheat bug fixes**<br><br>
+**1.9.2 - Added a welcome page(welcome.html)**<br><br>
 
 #### Big Updates
 **Big Updates Include:**
