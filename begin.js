@@ -55,6 +55,12 @@
     if (cheated) {
       location.replace("second_window.html");
     }
+    console.log(firstVisit)
+    if (!firstVisit) {
+      console.log("first visit!")
+          localStorage.setItem("firstVisit.KEEP", "false")
+          location.replace("welcome.html");
+        }
 
     });
 

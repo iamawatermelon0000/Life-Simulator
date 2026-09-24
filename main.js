@@ -6,6 +6,8 @@
 
     let debugging = localStorage.getItem("debugging.KEEP") == "true";
     let cheated = localStorage.getItem("cheated.KEEP") == "true";
+    let firstVisit = localStorage.getItem("firstVisit.KEEP") == "false";
+    
     let confirmed = false;
     //                                                                                                    //
 
@@ -191,7 +193,11 @@
         if (cheated) {
           location.replace("second_window.html");
         }
-
+        console.log("executing til here")
+        if (firstVisit) {
+          localStorage.setItem("firstVisit.KEEP", "false")
+          location.replace("welcome.html");
+        }
         if (age >= rebirthable_age && confirmed === false) {
           const conf_rebirth = confirm(`You've reached age 100, rebirth? Rebirthing will increase your current money multiplier by 0.5, current multiplier: ${multiplier}`);
 

@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title msg="We dont know wtf he's doing but im bored seeing as we are in beta phase for my tool (check out https://campaignityai.com)">Welcome to LiFe</title>      
+</head>
+<!-- Single-file system rules cause like why not -->
+<style>
+    *{
+        padding: 0;
+        margin: 0;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+    .container{
+        background: black;
+        height: 100vh;
+        color: #fff;
+    }
+    .lidl_white_pigment_here{
+        position: fixed;
+        background: #ffffffa4; /* I'm really not the best at css sooo please pardon me on this oone; */
+        width: 500px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        height: 10px;
+        border-radius: 50%;
+        z-index: 0;
+        opacity: .3;
+        transition: 1s linear;
+    }
+    .eyeball{
+        position: relative;
+        display: block;
+        width: 100px;
+        height: 100px;
+        background: black;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 50%;
+        overflow: hidden;
+    }
+    .eyeball.animate{
+        animation: 4s linear look-around;
+    }
+    .lidl_white_pigment_here.close_eyes{
+        height: 10px;
+    }
+    .lidl_white_pigment_here.animate{
+        animation: 1s linear blink;
+        height: 250px;
+    }
+    .lidl_white_pigment_here.blink{
+        animation: 1s linear blink;
+    }
+
+    .welcome-message{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+    .welcome-message h1{
+        font-size: 80px;
+    }
+    .welcome-message button{
+        width: 100px;
+        margin-top: 50px;
+        height: 50px;
+        border-radius: 5px;
+        font-size: 18px;
+        cursor: pointer;
+        z-index: 100;
+    }
+    button{
+        cursor: pointer;
+    }
+    .welcome-message p{
+        font-style: italic;
+    }
+    .alert-box{
+        display: none;
+    }
+    .life_balls{
+        display: flex;
+        gap: 5px;
+        padding: 10px;
+    }
+    .life_ball{
+        height: 20px;
+        width: 20px;
+        border-radius: 50%;
+        background: grey;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /* background: #fff; */
+    }
+    .ball2{
+        /* transform: rotate(45deg); */
+        rotate: 10deg;
+    }
+    .ball4{
+        rotate: -30deg;
+    }
+
+
+
+
+    @keyframes look-around{
+        0%{
+            top: 20%;
+            left: 50%;
+        }
+        40%{
+            top: 40%;
+            left: 70%;
+        }
+        70%{
+            top: 30%;
+            left: 40%;
+        }
+        100%{
+            top: 50%;
+            left: 50%;
+        }
+    }
+    @keyframes blink{
+        100%{
+            height: 250px;
+        }
+        85%{
+            height: 145px;
+        }
+        75%{
+            height: 110px;
+        }
+        50%{
+            height: 70px;
+        }
+        0%{
+            height: 10px;
+        }
+    }
+</style>
+<body>
+    <div class="container">
+        <div class="welcome-message">
+            <h1>LIFE</h1>
+            <br>
+            <p id="typewriter-text">The Game Of.... Well LiFe(Lithium Ion)...</p>
+            <a href="./index.html"><button class="play show">Play Game</button></a>
+        </div>
+
+        <div class="some_random_things_imma_animate_in_the_bg">
+            <!-- Why have a class name that long?? Why not... Like i said.. We are boredd.. Make everything unnecessarily complex..That's the way of life -->
+            <div class="lidl_white_pigment_here animate">
+                <span class="eyeball animate"></span>
+            </div>
+            <div class="life_balls">
+            <!-- The unhinged nature of this markup XD -->
+                <span class="life_ball ball1">L</span>
+                <span class="life_ball ball2">I</span>
+                <span class="life_ball ball3">F</span>
+                <span class="life_ball ball4">E</span>
+            <!-- Design is not just what it looks like and feels like. Design is how it works! - Steve Jobs-->
+            </div>
+        </div>
+
+        <div class="alert-box" msg="we are gonna need this">
+            <div class="topbar">
+                <span class="head">Alert!</span>
+                <span class="cancel">&times;</span>
+            </div>
+            <div class="messageSection" msg="This is where we write btw">
+                Loading life.........
+                Its really not the best ui you are gonna see in a while but no matter..
+                Welcome to life!!
+            </div>
+            <div class="button">
+                <!-- Only one of these buttons work and if they both do.. they are prolly gonna do the same thing.. but hey lets ust wait and see what happens -->
+                <button>Sure</button>
+                <button>Ok</button>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    const typeWriterText = document.getElementById("typewriter-text");
+    const eyes = document.querySelector(".lidl_white_pigment_here");
+    const eyeball = eyes.querySelector(".eyeball");
+    
+    const typewriter_texts = ["The Game Of.... Well LiFe(Lithium Ion)....", "Nah thats not right... its the GAME OF LIFE!!!", "THE LIFE WE LIVE AS EVERYDAY PEOPLE ONLY WE GROWW..", "IMMA SHUT UP NOW...", "ENJOY THE GAME!!"];
+
+    function typewriter_effect(){
+        let currentTextIndex = 0;
+        typeWriterText.innerHTML = "";
+        let i = 0;
+        let isPaused = false;
+        const typingInterval = setInterval(() => {
+            if(isPaused) return;
+            const text = typewriter_texts[currentTextIndex];
+            // console.log(text)
+            if(!text || i >= text.length){
+                if(currentTextIndex >= typewriter_texts.length){
+                    clearInterval(typingInterval);
+                    console.log("Hit here");
+                    eyes.classList.remove("animate");
+                    eyeball.classList.remove("animate");
+                    setTimeout(() => {
+                        eyes.classList.add("animate");
+                        eyeball.classList.add("animate");
+                    }, 1500);
+                    return;
+                };
+                currentTextIndex++;
+                i = 0;
+                isPaused = true;
+                setTimeout(() => {
+                    typeWriterText.innerHTML = currentTextIndex < typewriter_texts.length ? "" : typewriter_texts[currentTextIndex - 1];
+                    isPaused = false;
+                }, 1000 );
+            }
+            else{
+                typeWriterText.textContent += text.charAt(i);
+                i++;
+                console.log(i, currentTextIndex);
+            };
+        }, 50);
+    };
+    document.addEventListener("DOMContentLoaded", () => {
+        typewriter_effect();
+    });
+
+</script>
+</html>
