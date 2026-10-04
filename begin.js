@@ -58,6 +58,10 @@
 
     });
 
+    document.addEventListener("keydown", e => {
+      if (e.key === "\\") begin();
+    })
+
 /* NAME */
 /* NAME VARIABLES */
     const l_names = [
