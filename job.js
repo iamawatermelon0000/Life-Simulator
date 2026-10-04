@@ -102,7 +102,7 @@
 
         save();
         printInfos();
-      }, salary_time * 1000);
+      }, salary_time);
 
       setTimeout(() => {
         prJobStat.textContent = "";
