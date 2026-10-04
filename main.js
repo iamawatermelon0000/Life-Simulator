@@ -222,11 +222,9 @@
         printInfos();
         checkHealthy();
         checkValid();
+        checkCompat();
 
       }, 1900);
-
-      let _check_count = 0;
-  const _checking=setInterval(()=>{_check_count++;console.warn(`Hunger:${hunger}, Happiness:${happiness}, Energy:${energy}`);if(!iAll)console.warn("Interval not running!");if(iAll)console.warn(iAll);console.warn(confirmed);if(_check_count>=10){clearInterval(_checking);console.warn("%cstopped","font-size:25px;color:red;font-weight:bold")}},1000);
 
       save();
     };
