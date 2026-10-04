@@ -57,7 +57,7 @@
 
       setTimeout(() => {
         on_cd = false;
-      }, 1500);
+      }, 3000);
 
       save();
       printInfos();
