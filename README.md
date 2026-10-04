@@ -5,7 +5,8 @@
 - the repo one has imploded due to various bugs<br>
 - dont try to cheat...<br>
 - tell me if there are any bugs!<br>
-- you can now visit [game's page!](https://iamawatermelon0000.github.io/Life-Simulator/)
+- you can now visit [game's web!](https://iamawatermelon0000.github.io/Life-Simulator/)
+- press \ to play!
 
 ## Main
 ### About
@@ -13,9 +14,9 @@
 - Made by: @iamawatermelon0000<br>
 - Project Name: Life Simulator<br>
 - Made on: 07/09/2026 (July 9th of 2026)<br>
-- Last updated on: 09/22/2026 6:31PM GMT+7 (Southeast Asia)<br>
-*<sub>or September 22nd, 2026 for my fellow Asians</sub>*
-- Total files: approx. 14 files (including README)<br>
+- Last updated on: 10/04/2026 3:48PM GMT+7 (Southeast Asia)<br>
+*<sub>or October 10th, 2026 for my fellow Asians</sub>*
+- Total files: approx. 15 files (including README)<br>
 
 ### Updates
 ---
@@ -43,11 +44,12 @@
 **1.8.0 - Intelligence! (it's finally here), QoL and Bug fixes**<br><br>
 **1.9.0 - Title scrolling, job income bonus if you're smart and __MAJOR__ bug fixes!**<br><br>
 **1.9.1 - Anticheat bug fixes**<br><br>
+**2.0.0 - RELATIONSHIP! (very WIP), more details in Update Logs!**<br><br>
 
 #### Big Updates
 **Big Updates Include:**
 ```
-1.0.0, 1.3.0, 1.4.8, 1.6.5, [1.8.0, 1.9.0]<- most files edited
+1.0.0, 1.3.0, 1.4.8, 1.6.5, [1.8.0, 1.9.0]<- most files edited, 2.0.0
 ```
 <sub>These are according to me btw</sub>
 
