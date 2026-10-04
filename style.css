@@ -11,7 +11,8 @@
     #lottery,
     #rebirthShopDIV,
     #rebirth,
-    #intelligenceContainer {
+    #intelligenceContainer,
+    #relationship {
       display: flex;
       justify-content: center;
       align-items: center;
@@ -35,10 +36,6 @@
     body {
       background: #3b3b3b;
       border: 1px solid black;
-    }
-
-    #startingScreen {
-      z-index: 1;
     }
 
     #container1 {
@@ -89,4 +86,3 @@
 
       background: #FFEB00;
     }
-
