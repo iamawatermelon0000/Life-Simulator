@@ -53,6 +53,9 @@
       localStorage.setItem("intelligencePoint", intel_point);
       localStorage.setItem("extraIntelligencePoint", extra_intel);
       localStorage.setItem("plang", pl);
+
+      localStorage.setItem("comp", cm);
+      localStorage.setItem("inRelationship", in_relationship);
     };
     /* PRINT INFOS */
     function printInfos() {
@@ -88,5 +91,8 @@
       prTime.innerHTML = `You've been here for:<br>${hr_time.toString().padStart(2, "0")}:${min_time.toString().padStart(2, "0")}:${sec_time.toString().padStart(2, "0")}`;
 
       prIntelligence.textContent = `Your intelligence: ${intel_point} (${current_title})`;
+
+      prComp.textContent = `Relationship: ${cm} (${r_status})`;
+      in_relationship === true ? prGain.textContent = `Gainings: ${cm > 50 ? "+" : "-"} ${r_value}` : prGain.textContent = "Gainings: None"
     }
 
