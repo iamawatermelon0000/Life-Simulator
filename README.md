@@ -14,8 +14,8 @@
 - Made by: @iamawatermelon0000<br>
 - Project Name: Life Simulator<br>
 - Made on: 07/09/2026 (July 9th of 2026)<br>
-- Last updated on: 10/04/2026 3:48PM GMT+7 (Southeast Asia)<br>
-*<sub>or October 10th, 2026 for my fellow Asians</sub>*
+- Last updated on: 10/11/2026 5:48PM GMT+7 (Southeast Asia)<br>
+*<sub>or October 11th, 2026 for my fellow Asians</sub>*
 - Total files: approx. 15 files (including README)<br>
 
 ### Updates
@@ -45,6 +45,8 @@
 **1.9.0 - Title scrolling, job income bonus if you're smart and __MAJOR__ bug fixes!**<br><br>
 **1.9.1 - Anticheat bug fixes**<br><br>
 **2.0.0 - RELATIONSHIP! (very WIP), more details in Update Logs!**<br><br>
+**2.1.0 - Quality of Life, Bug fixes and Minor additions**<br>
+<sub>pls dont publix ecexute me</sub><br><br>
 
 #### Big Updates
 **Big Updates Include:**
