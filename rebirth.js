@@ -14,7 +14,7 @@
     const prTimeRebirthed = document.getElementById("timesRebirthed");
 
     function rebirth() {
-      if (age < rebirthable_age) { cheated = true; return; }
+      if (age < rebirthable_age) { return; }
 
       multiplier = Math.min(multiplier + 0.5, 10);
       rebirth_token += 1;
