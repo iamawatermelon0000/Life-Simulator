@@ -33,6 +33,7 @@
 /* JOB FUNCTION */
     function job() {
       if (age < 16) { prJobStat.textContent = "You're too young!"; return; }
+      if (age < 16 && curr_job) { cheated = true; return; }
 
       if (curr_job !== "None" && age < 16 && !debugging) { cheated = true; save(); location.reload(); }
       if (curr_job !== "None" && !change_active) {
@@ -117,7 +118,8 @@
         "thrifting",
         "freelancing for a friend",
         "doing homework",
-        "learning something"
+        "learning something",
+        "pickpocketing"
       ];
 
     function doHustle() {
@@ -125,7 +127,7 @@
 
       if (Math.random() < .5) {
         const convert = -hust_inc;
-        if (convert === -hust_inc) result = "lost";
+        if (convert === hust_inc) result = "lost";
         alert(`Hustle: ${hustles[Math.floor(Math.random() * hustles.length)]}, you ${result} ${convert}`);
         money += (hust_inc * multiplier);
 
