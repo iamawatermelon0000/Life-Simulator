@@ -192,7 +192,7 @@
         money += 50;
 
       }  else {
-        alert(`It looks like that ${something[Math.floor(Math.random() * something.length)]} seem like a waste of time...`);
+        alert(`It looks like that ${something[Math.floor(Math.random() * something.length)]} is a waste of time...`);
 
         hunger += 25;
         money -= 50;
@@ -296,48 +296,61 @@
     ticket_num--;
     const num_1 = lottery_number.join(' ');
     const num_2 = winning_number.join(' ');
+    console.warn(`${num_1} !!! ${num_2}`)
 
     document.getElementById("ticketNumber").textContent = `Your ticket number: ${num_1}`;
+    document.getElementById("winningNumber").textContent = `Winning number: ${num_2}`;
 
     setTimeout(() => {
-        for (let i = 0; i < 6; i++) {
-          let correct_num = [];
-          let winning_price = 0;
 
-          if (lottery_number[i] === winning_number[i]) correct_num.push(`N1: ${lottery_number[i]}, N2: ${winning_number[i]}`);
+      let correct_num = [];
+
+      let i = 0
+        while ((i += 1) <= 5) {
+
+          if (lottery_number[i] === winning_number[i]) {
+            correct_num.push(`N1: ${lottery_number[i]}, N2: ${winning_number[i]}`);
+          }
+
+          console.log(lottery_number[i], winning_number[i]);
+          console.log(correct_num)
 
           correct_num.forEach(num => {
-
             const each_num_price = Math.floor(Math.random() * (999 - 100 + 1) + 100);
             money += each_num_price;
-
-            console.warn(`ON_FOREACH: ${num}`);
-            console.warn(`WINNING_PRICE_FOREACH: ${each_num_price}`);
+            console.log(each_num_price);
           });
 
-          if (i === 6) {
+          if (i === 5) {
             if (correct_num.length <= 0) {
               alert("You lost...");
               if (Math.random() < 0.5) {
                 alert("Someone felt bad and gave you $10!");
                 money += 10;
               }
+            } else {
+              alert("You won!")
             }
           }
         }
-    }, 1200);
 
     winning_number = [];
     lottery_number = [];
 
+    document.getElementById("ticketNumber").textContent = `Your ticket number: PLACEHOLDER`;
+    document.getElementById("winningNumber").textContent = `Winning number: PLACEHOLDER`;
+
     save();
     printInfos();
+
+    }, 1200);
+
   }
 
   /* REROLL NUMBER */
   function reroll() {
 
-    for (let i = 0; i <= 6; i++) {
+    for (let i = 0; i < 6; i++) {
 
       lottery_number.push(Math.floor(Math.random() * 99) + 1);
 
@@ -349,9 +362,9 @@
 
     }
 
-  }
 
-    for (let i = 0; i <= 6; i++) {
+
+    for (let i = 0; i < 6; i++) {
 
       winning_number.push(Math.floor(Math.random() * 99) + 1);
 
@@ -360,5 +373,6 @@
           winning_number.pop();
         }
       }
-
     }
+
+  }
