@@ -47,6 +47,7 @@
 **2.0.0 - RELATIONSHIP! (very WIP), more details in Update Logs!**<br><br>
 **2.1.0 - Quality of Life, Bug fixes and Minor additions**<br>
 <sub>pls dont publix ecexute me</sub><br><br>
+**2.1.1 - Super tiny update (more infos in update_logs.html)**<br><br>
 
 #### Big Updates
 **Big Updates Include:**
