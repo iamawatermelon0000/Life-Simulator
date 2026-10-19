@@ -119,11 +119,18 @@
         "freelancing for a friend",
         "doing homework",
         "learning something",
-        "pickpocketing"
+        "pickpocketing",
+        "playing games",
+        "dancing on the streets",
+        "doing nothing"
       ];
 
     function doHustle() {
       const hust_inc = Math.floor(Math.random() * (9999 - 1 + 1) + 1);
+      let extras;
+
+      if (Math.random() < 0.15) extras = Math.floor(Math.random() * (500 - 100 + 1) + 100);
+      hust_inc += extras || 0;
 
       if (Math.random() < .5) {
         const convert = -hust_inc;
