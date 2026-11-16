@@ -1,10 +1,14 @@
     /* BEGINNING */
     const btn = document.getElementById("startGame");
     const rebirth_btn = document.getElementById("rebirthBTN");
+
     let started = false;
     let changing = false;
 
     function begin() {
+
+      pressed = true;
+      if (easter_i) clearInterval(easter_i);
 
       if (!started) {
 
@@ -93,3 +97,35 @@
       save();
       printInfos();
     }
+
+  /** EASTER EGG */
+
+    let pressed = false;
+    let easter_i;
+    let text_order_easter_egg;
+
+  setTimeout(() => {
+    const easter_texts = ["why", "won't", "you", "press", "the", "button"];
+    let stt = 0;
+
+    if (!pressed) {
+
+      document.title = "ㅤ";
+
+      easter_i = setInterval(() => {
+
+        text_order_easter_egg = easter_texts[stt];
+        document.title += ` ${text_order_easter_egg}`
+
+        stt++;
+
+        if (stt >= easter_texts.length + 1) {
+          stt = 0;
+          document.title = "ㅤ"
+        }
+
+      }, 500);
+
+    }
+
+  }, 10000)
